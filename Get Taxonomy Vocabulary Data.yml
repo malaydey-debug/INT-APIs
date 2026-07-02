@@ -1,0 +1,21 @@
+info:
+  name: Get Taxonomy Vocabulary Data
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{backend_url}}/api/en/taxo-vocabulary-data/people_category"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{access_token}}
+  body:
+    type: form-urlencoded
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

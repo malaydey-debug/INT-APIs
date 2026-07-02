@@ -1,0 +1,15 @@
+opencollection: 1.0.0
+
+info:
+  name: Neuland Labs
+
+request:
+  variables:
+    - name: json_web_token_0ao7
+      value: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
