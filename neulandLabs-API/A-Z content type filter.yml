@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{backend_url}}/api/en/taxo-vocabulary-data/people_category"
+  url: "{{backend_url}}/api/alphabet-filter/glossary"
   headers:
     - name: Content-Type
       value: application/json
