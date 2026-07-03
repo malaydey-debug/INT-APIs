@@ -1,0 +1,25 @@
+info:
+  name: Story Details
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{backend_url}}/api/en/story/details"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{access_token}}
+  body:
+    type: json
+    data: |-
+      {
+          "data" : "Y+FbY9xXe8A+zNZyZrnZYyvsNE3mzfJJU2eptgfXcHHnj4zBXWZGbROaR2gzmUbcZrBI5Inr0v+6iS6abCRmyNxQMTBwx/CBJdNcjrVReN96UI8V0bxCzaz9Bipk+uV3"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
