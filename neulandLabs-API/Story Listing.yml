@@ -1,0 +1,32 @@
+info:
+  name: Story Listing
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{backend_url}}/api/{langcode}/story/listing?page=1&limit=10&search=2025"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{access_token}}
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+    - name: search
+      value: "2025"
+      type: query
+  body:
+    type: json
+    data: // page=1&limit=10&categories=15&alphabet=a&search=2025
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
