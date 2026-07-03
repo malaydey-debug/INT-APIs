@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{backend_url}}/api/en/menu-listing/main"
+  url: "{{backend_url}}/api/en/menu/listing/main"
   headers:
     - name: Content-Type
       value: application/json
