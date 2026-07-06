@@ -1,0 +1,317 @@
+info:
+  name: Blog_Item_Rel_Dump
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{lupin_be}}/api/v2/import/blog_item_rel"
+  headers:
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 2026_02_12_dev
+    request:
+      url: "{{lupin_be}}/api/v2/import/blog_item_rel"
+      method: GET
+      headers:
+        - name: Connection
+          value: keep-alive
+        - name: Content-Type
+          value: application/json
+        - name: Authorization
+          value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 12 Feb 2026 17:36:55 GMT
+        - name: Content-Type
+          value: text/csv; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Disposition
+          value: attachment; filename="blog-related-tests.csv"
+        - name: ETag
+          value: W/"6224-sMsVqak2MXoUwy5oYbtKHMUU3b8"
+        - name: Set-Cookie
+          value: connect.sid=s%3A2X8eOIe6ZnxukkYwDOcCZzcfrA2TnIOu.msOSs3U5vqUHq2L5IPYOPKmeDBLPlZLZVUb8FKI62fA; Path=/; Expires=Fri, 13 Feb 2026 17:36:55 GMT; HttpOnly
+        - name: Vary
+          value: Accept-Encoding
+        - name: Content-Encoding
+          value: br
+      body:
+        type: text
+        data: |
+          id,slug,related_test_csv
+          3,how-important-are-preventive-health-checkups,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          5,how-does-stress-affect-diabetes,"LDIMM0874,LDBIO0253,LDBIO0255,LDIMM0879,LDBIO0634,LDIMM0723"
+          7,consequences-of-sedentary-lifestyle-on-human-body,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          8,can-allergies-worsen-diabetes,"LDIMM0874,LDBIO0253,LDBIO0255,LDIMM0879,LDBIO0634,LDIMM0723"
+          9,important-considerations-for-choosing-the-right-diagnostic-center,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          10,boosting-your-bone-health-do-you-have-enough-calcium-and-vitamin-d-for-healthy-bones,"LDIMM0292,LDSER0154,LDSER0143,LDSER0141,LDBIO0944"
+          11,first-line-drug-resistance-in-tuberculosis,"LDHEM0504,LDMIC0040,LDMOL1391,LDSER0950,LDHEM0378,LDSER1113"
+          12,how-does-second-line-drug-resistance-impact-tuberculosis-management,"LDHEM0504,LDMIC0040,LDMOL1391,LDSER0950,LDHEM0378,LDSER1113"
+          13,antiphospholipid-syndrome-and-its-diagnosis,"LDSER0172,LDSER0173,LDIMM0174,LDIMM0223,LDIMM0222,LDSER0221,LDBIO0937"
+          16,hepatitis-c-infection-and-its-diagnosis,"LDMOL1466,LDMOL0645,LDBIO1294,LDHEM0378"
+          18,prenatal-aneuploidy-screening-with-quadruple-marker-tests-during-the-2nd-trimester,"LDMOL0895"
+          19,prenatal-aneuploidy-screening-with-triple-marker-test-in-2nd-trimester,"LDIMM0537,LDMOL0895"
+          20,cervical-cancer-what-you-need-to-know,"LDIMM0287"
+          22,prognosis-of-hepatitis-b-with-hbv-viral-load,"LDBIO0402,LDHEM0504,LDMOL1466,LDBIO1294,LDHEM0378,LDSER1399"
+          24,screening-type-2-diabetes-mellitus,"LDIMM0874,LDBIO0253,LDBIO0255,LDIMM0879,LDBIO0634,LDIMM0723"
+          26,autoimmune-hepatitis-and-its-diagnosis,"LDHEM0504,LDSER0179,LDSER0166,LDBIO1294,LDHEM0378"
+          27,cirrhosis-and-autoimmune-liver-diseases,"LDBIO0058,LDBIO0590,LDBIO0125,LDBIO0202,LDBIO1294"
+          28,hla-b27-testing-in-ankylosing-spondylitis,"LDIMM0292,LDSER0143,LDSER0141,LDBIO0944,LDMOL0719"
+          29,understanding-hypersensitivity-pneumonitis-hp,"LDBIO0402,LDHEM0504,LDBIO0044,LDBIO1209,LDHEM0378,LDSER0989,LDSER0990"
+          30,lupus-anticoagulant-test,"LDSER0172,LDSER0173,LDIMM0174,LDIMM0223,LDIMM0222,LDSER0221,LDBIO0937"
+          31,predictive-and-prognostic-role-of-anti-ccp-antibody-testing-in-rheumatoid-arthritis,"LDIMM0292,LDSER0154,LDSER0143,LDSER0141,LDBIO0944"
+          32,sperm-dna-fragmentation-test-for-male-infertility,"LDIMM1186,LDCLI1149,LDCLI1148"
+          33,testing-for-rheumatoid-arthritis-with-ana-blot-test,"LDIMM0292,LDSER0154,LDSER0143,LDSER0141,LDBIO0944"
+          34,diabetes-screening-for-diagnosis-and-prevention,"LDIMM0874,LDBIO0253,LDBIO0255,LDIMM0879,LDBIO0634,LDIMM0723"
+          35,how-important-is-vitamin-d,"LDIMM0292,LDSER0154,LDSER0143,LDSER0141,LDBIO0944"
+          37,navigating-the-future-trends-and-innovations-in-diagnostics,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          38,evolution-of-the-diagnostics-industry-new-trends-models-transforming-healthcare-industry,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          39,everything-you-need-to-know-about-infection-and-inflammation,"LDSER1122,LDSER0141,LDBIO0402,LDHEM0504,LDMOL1466,LDMIC0040,LDSER0145,LDSER0438,LDMICRO2028,LDHEM0378,LDMOL1912,LDMOL0486,LDSER1113,LDMLD1591"
+          42,know-more-about-liver-function-tests,"LDBIO0058,LDBIO0590,LDBIO0125,LDBIO0202,LDBIO1294"
+          43,do-you-have-a-microbiological-infection,"LDSER1122,LDSER0141,LDBIO0402,LDHEM0504,LDMOL1466,LDMIC0040,LDSER0145,LDSER0438,LDMICRO2028,LDHEM0378,LDMOL1912,LDMOL0486,LDSER1113,LDMLD1591"
+          44,prenatal-screening-how-it-benefits-the-mother-and-the-baby,"LDIMM0537"
+          45,thyroid-hormones-what-you-need-to-know,"LDIMM1192,LDSER0188,LDSER0187"
+          46,vitamin-b12-and-its-deficiency,"LDIMM0528,LDIMM0292,LDIMM1268,LDIMM1195,LDIMM0724,LDBIO0634,LDIMM1269,LDBIO0883,LDHEM0378"
+          47,chromosomal-analysis-knowing-the-root-cause,"LDMOL0895"
+          51,tb-culture-and-tb-gold-and-genexpert-an-overview,"LDHEM0504,LDMIC0040,LDMOL1391,LDSER0950,LDHEM0378,LDSER1113"
+          53,food-intolerance-what-you-need-to-know,"LDALL1332,LDIMM0863"
+          54,know-all-about-allergic-rhinitis,"LDALL1332,LDIMM0863"
+          55,extensively-drug-resistant-tuberculosis-xdr-tb-what-is-it,"LDHEM0504,LDMIC0040,LDMOL1391,LDSER0950,LDSER1113"
+          56,pcos-things-to-know,"LDIMM0874,LDIMM1186,LDIMM1092,LDBIO0402,LDIMM1195,LDIMM0169,LDIMM0879,LDIMM0723,LDIMM0569"
+          57,next-generation-sequencing-what-you-should-know-about-prenatal-aneuploidy-screening,"LDMOL0895"
+          58,food-allergies-how-to-diagnose,"LDALL1332,LDIMM0863"
+          59,know-about-allergic-bronchopulmonary-aspergillosis,"LDALL0064,LDSER0203,LDSER0204,LDSER0205"
+          60,what-is-allergic-dermatitis,"LDALL1517,LDALL1514"
+          61,all-about-chromosomal-aneuploidies,"LDMOL0895"
+          62,detection-and-treatment-of-hepatitis-b-drug-resistance,"LDBIO0402,LDHEM0504,LDBIO1294,LDSER1399"
+          63,diagnosing-atopic-and-non-atopic-allergy-with-phadiatop-test,"LDALL1332,LDALL1517,LDALL1514,LDIMM0863"
+          64,inhalant-allergies,"LDALL1332"
+          65,pre-eclampsia-screening-in-first-trimester,"LDBIO1294"
+          72,what-does-a-high-esr-test-mean-causes-of-elevated-esr-and-when-you-should-be-concerned,"LDHEM0378,LDMIC1328,LDBIO0904,LDBIO0882,LDSER0657,LDIMM1314,LDSER0668,LDALL0065,LDALL0065,LDBIO0360,LDBIO1073,LDIMM0963,LDIMM1110,LDSER1234,LDSER0185,LDBIO0026,LDBIO0124,LDIMM0011,LDBIO0012,LDIMM0029,LDBIO0035,LDIMM0039,LDMIC0041,LDBIO0042,LDBIO0046,LDBIO0042,LDSER0001,LDSER1781,LDBIO0050,LDIMM0296,LDIMM0291,LDBIO0060,LDSER1723,LDALL1471,LDALL1477,LDALL1492,LDALL1497,LDALL0073,LDALL1504,LDALL1556,LDALL1506,LDALL0078,LDALL0086,LDALL0093,LDBIO1721,LDALL0094,LDALL0097,LDALL0103,LDALL1542,LDBIO0241,LDALL0109,LDALL0112,LDSER0267,LDBIO1283,LDBIO0130,LDCYT0132,LDBIO0133,LDBIO0137,LDIMM0146,LDSER0270,LDIMM0274,LDBIO0279,LDBIO0280,LDBIO0281,LDBIO0282,LDBIO0283,LDBIO0284,LDIMM0286,LDBIO0290,LDIMM0288,LDIMM1237,LDIMM1382,LDCYT0557,LDCOA0531,LDMOL0487,LDIMM0873,LDFLO1447,LDHEM1770"
+          73,feeling-tired-all-the-time-it-could-be-more-than-just-stress,"LDIMM1268,LDIMM1195,LDBIO0944,LDBIO0883"
+          74,breathing-easier-daily-habits-and-lifestyle-changes-for-effective-asthma-management,"LDALL1332,LDIMM0863"
+          75,immune-boosting-foods-to-prevent-norovirus-infection-your-complete-norovirus-prevention-diet-for-stronger-immunity,"LDHEM0626,LDBIO0402,LDBIO0634,LDBIO1292,LDIMM1272"
+          76,living-with-diabetes-mellitus-smart-daily-routines-for-effective-blood-sugar-control,"LDIMM0874,LDBIO0253,LDBIO0255,LDIMM0879,LDBIO0634,LDIMM0723"
+          77,managing-cystic-fibrosis-with-a-high-calorie-high-protein-diet-essential-nutrition-for-cf-patients,"LDIMM0292,LDBIO0929,LDIMM1276,LDBIO1266,LDBIO1275,LDBIO1209,LDBIO0240"
+          78,nutrition-for-lung-health-best-diet-for-pneumonia-recovery-and-foods-that-boost-respiratory-immunity,"LDBIO0402,LDBIO0044,LDBIO1209,LDSER0989,LDSER0990"
+          79,winter-cough-and-seasonal-infections-when-to-get-tested,"LDBIO0402,LDBIO0634,LDALL1332,LDIMM0863"
+          80,understanding-early-signs-of-diabetes-mellitus-why-fasting-blood-glucose-and-hba1c-tests-matter,"LDIMM0874,LDBIO0253,LDBIO0255,LDIMM0879,LDBIO0634,LDIMM0723,LDBIO1294"
+          81,cystic-fibrosis-genetics-how-cftr-gene-mutations-cause-disease-and-guide-modern-treatment,"LDIMM0292,LDBIO0929,LDBIO0634,LDBIO1159,LDIMM1276,LDBIO1266,LDBIO1275,LDBIO0358,LDBIO0240"
+          82,winter-weight-gain-and-sugar-spikes-how-hba1c-testing-helps-you-stay-on-track,"LDIMM1268,LDBIO0253,LDBIO0255,LDBIO1292"
+          83,dry-skin-and-brittle-hair-what-could-be-missing-in-your-diet,"LDIMM0528,LDIMM1192,LDIMM1268,LDBIO1292,LDIMM1276,LDBIO1266,LDBIO1275,LDBIO0883"
+          84,feeling-dizzy-or-light-headed-frequently-what-your-diet-might-be-telling-you,"LDBIO0904,LDIMM0528,LDIMM1268,LDBIO0253,LDIMM1195,LDIMM0568,LDBIO0883,LDHEM1057"
+          85,persistent-fever-that-won-t-go-away-how-cbc-crp-and-esr-tests-help-detect-the-cause,"LDSER1122,LDSER0141,LDBIO0402,LDMOL1466,LDMIC0040,LDSER0145,LDSER0438,LDMICRO2028,LDMOL0486,LDSER1113,LDMLD1591"
+          86,frequent-headaches-or-brain-fog-it-might-be-linked-to-your-diet,"LDIMM0528,LDIMM1268,LDBIO0253,LDIMM0568,LDBIO0883"
+          87,stress-and-blood-sugar-how-stress-impacts-your-glucose-levels-and-why-monitoring-matters,"LDIMM0874,LDBIO0253,LDBIO0255,LDIMM0879,LDBIO1292,LDIMM0723,LDBIO1294"
+          89,screen-time-fatigue-and-vitamin-d-deficiency-the-hidden-connection-you-shouldn-t-ignore,"LDIMM0528,LDIMM0292,LDIMM1268,LDIMM1195,LDBIO0944,LDBIO1292,LDBIO0883"
+          90,sleep-deprivation-effects-how-poor-sleep-impacts-your-heart-and-kidney-health,"LDBIO0674,LDIMM1195,LDBIO1292"
+          91,swelling-in-legs-or-face-it-might-be-a-kidney-warning-sign,"LDBIO0674,LDBIO0256,LDBIO1294"
+          92,constant-fatigue-here-what-your-blood-test-might-reveal,"LDIMM0528,LDIMM0292,LDIMM1268,LDIMM1195,LDBIO0883"
+          93,unexplained-fatigue-in-winter-sunshine-might-be-the-missing-link,"LDIMM0528,LDIMM1268,LDIMM1195,LDBIO0883"
+          94,what-a-complete-blood-count-cbc-tells-you-about-your-health,"LDHEM1057"
+          95,preventive-health-checkups-why-they-should-be-part-of-your-routine,"LDIMM1192,LDIMM1268,LDBIO1292"
+          96,key-diagnostic-tests-for-detecting-cystic-fibrosis-in-newborns-how-early-screening-saves-lives,"LDBIO0929,LDBIO1159,LDIMM1276,LDBIO1266,LDBIO1275,LDIMM1272,LDBIO0358,LDBIO0240"
+          97,the-science-behind-norovirus-outbreaks-and-transmission-understanding-the-stomach-flu-virus,"LDBIO1292"
+          98,chest-x-ray-and-blood-tests-in-pneumonia-detection-understanding-the-diagnostic-workflow-for-respiratory-infections,"LDBIO0044,LDBIO1292,LDBIO1209,LDSER0989,LDSER0990"
+          99,sickle-cell-disease-explained-symptoms-triggers-and-latest-treatments,"LDHEM1057"
+          100,wake-up-feeling-better-top-morning-routine-tips-to-ease-arthritis-stiffness,"LDSER0154,LDSER0143,LDSER0141,LDBIO0944"
+          101,how-pneumonia-impacts-the-respiratory-system-understanding-lung-infection-diagnosis-and-recovery,"LDBIO0044,LDBIO1292,LDBIO1209,LDSER0989,LDSER0990"
+          102,rapid-antigen-vs-culture-tests-for-strep-throat-diagnosis-understanding-accuracy-and-clinical-use,"LDALL1332,LDIMM0863"
+          103,screening-and-electrophoresis-tests-for-sickle-cell-disease-the-role-of-laboratory-testing-in-early-detection-and-carrier-identification,"LDHEM1057"
+          104,heart-healthy-fats-and-oils-your-guide-to-smart-choices-for-cholesterol-management,"LDBIO0674,LDIMM0724,LDIMM0192,LDBIO0933"
+          105,home-blood-pressure-monitoring-tips-how-to-use-your-home-bp-monitor-for-accurate-self-bp-tracking,"LDIMM1192"
+          106,boost-your-cardiac-fitness-with-interval-walking-a-heart-health-exercise-plan-backed-by-stress-tests,"LDBIO0674,LDIMM0724,LDIMM0192,LDBIO0933"
+          107,low-sodium-indian-meal-plan-for-a-week-your-ultimate-blood-pressure-diet,"LDIMM1192"
+          108,understanding-breast-cancer-subtypes-how-molecular-subtyping-tests-guide-personalized-cancer-treatment,"LDIMM1092"
+          109,understanding-atherosclerosis-and-plaque-build-up-cholesterol-levels-lipid-profile-and-your-heart-disease-risk,"LDBIO0674,LDBIO0933"
+          110,is-that-joint-pain-arthritis-7-early-signs-you-can-t-afford-to-miss,"LDSER1122,LDSER0154,LDSER0143,LDSER0141,LDBIO0944"
+          112,decoding-your-genes-could-your-family-history-mean-arthritis-is-coming-for-you,"LDSER1122,LDSER0154,LDSER0143,LDBIO0944"
+          113,sleep-hygiene-and-heart-health-how-better-sleep-quality-supports-heart-wellness,"LDBIO0674,LDIMM0192,LDIMM0193,LDBIO0933"
+          114,stress-and-blood-pressure-daily-routines-that-lower-stress-hormone-levels-and-support-bp-control,"LDIMM1195,LDIMM0723"
+          115,genetic-testing-for-cancer-risk-how-brca1-brca2-and-hereditary-markers-guide-prevention-and-early-diagnosis,"LDIMM0287,LDIMM0285,LDMOL1635"
+          116,er-pr-her2-and-ki-67-in-breast-cancer-decoding-tumor-marker-testing,"LDIMM1092"
+          117,white-coat-hypertension-vs-masked-hypertension-understanding-hidden-blood-pressure-patterns-with-abpm-test,"LDIMM1195"
+          120,understanding-gender-differences-in-heart-attack-symptoms-why-troponin-test-results-matter-for-cardiac-risk,"LDBIO0674,LDIMM1025,LDBIO1229,LDBIO0933"
+          121,hearing-loss-causes-types-and-why-early-screening-matters,"LDIMM1192,LDSER0188,LDSER0187"
+          123,beyond-aches-and-pains-understanding-the-real-differences-in-arthritis-types,"LDSER1122,LDSER0154,LDSER0143"
+          124,transform-your-home-simple-ergonomic-hacks-for-arthritis-friendly-living,"LDSER1122,LDSER0154,LDSER0143"
+          125,what-is-cholera-really-the-truth-about-this-dangerous-disease-and-how-it-spreads-fast,"LDSER1122,LDMIC1327"
+          126,ghost-of-the-past-why-cholera-still-haunts-the-world-and-what-we-have-learned,"LDMIC1327"
+          127,cholera-at-home-top-essential-hygiene-and-care-tips-for-effective-recovery,"LDMIC1327"
+          128,eat-your-way-to-less-pain-the-ultimate-anti-inflammatory-food-list-for-arthritis,"LDSER0154"
+          129,the-worst-foods-for-arthritis-are-you-eating-these-pain-triggers,"LDSER1122"
+          130,the-future-of-arthritis-treatment-top-breakthroughs-you-need-to-know-about,"LDSER1122"
+          131,family-safety-plan-protecting-loved-ones-during-a-cholera-outbreak,"LDMIC1327"
+          134,from-filters-to-tech-innovations-that-are-stopping-cholera-in-its-tracks,"LDMIC1327"
+          135,eating-to-recover-the-best-foods-for-getting-back-on-your-feet-after-cholera,"LDMIC1327"
+          136,dehydrated-how-to-make-a-lifesaving-diy-rehydration-drink-for-cholera-recovery,"LDMIC1327"
+          137,beyond-water-effective-electrolyte-heroes-you-need-during-diarrheal-illnesses,"LDMIC1327"
+          141,foods-that-strengthen-teeth-and-gums-and-protect-your-heart-brain-and-overall-health,"LDIMM1192"
+          143,top-nutritional-tips-to-help-prevent-age-related-hearing-decline,"LDIMM1192,LDSER0188,LDSER0187"
+          145,best-heart-health-practices-for-every-age-group,"LDIMM1192,LDBIO0674,LDBIO0933"
+          150,the-global-burden-of-cardiovascular-diseases-what-you-need-to-know,"LDBIO0674,LDBIO0933"
+          155,top-immune-boosting-foods-to-prevent-fever-and-fight-infections,"LDIMM0528,LDIMM1192,LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDIMM1276,LDBIO1266,LDBIO1275,LDBIO0883,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005"
+          156,iron-deficiency-anaemia-vs-vitamin-deficiency-anaemia-what-s-the-difference,"LDIMM0528,LDIMM0568,LDBIO0883,LDHEM1057"
+          157,how-to-manage-fatigue-from-anaemia-simple-hacks-that-actually-work,"LDIMM0528,LDIMM0568,LDHEM1057"
+          158,understanding-pre-diabetes-causes-symptoms-and-how-to-know-if-you-re-at-risk,"LDIMM0874,LDBIO0255,LDIMM0879,LDIMM0723"
+          159,what-is-the-role-of-vitamin-b12-and-folate-in-preventing-anaemia-a-comprehensive-guide,"LDIMM0568,LDHEM1057"
+          160,how-stress-affects-blood-sugar-and-what-you-can-do-about-it,"LDBIO0255"
+          161,how-to-manage-fever-while-traveling-smart-tips-for-safer-journeys,"LDMIC0040,LDMICRO2028"
+          162,understanding-fever-what-it-means-and-when-to-worry,"LDMOL1466,LDMIC0040,LDSER0145,LDSER0438,LDMICRO2028,LDMOL1912,LDMOL0486,LDSER1113,LDMLD1591"
+          163,fever-in-children-vs-adults-key-differences-in-symptoms-testing-and-care,"LDMOL1466,LDMIC0040,LDSER0145,LDSER0438,LDMICRO2028,LDMOL1912,LDMOL0486,LDSER1113,LDMLD1591"
+          164,how-continuous-glucose-monitors-cgms-are-transforming-diabetes-management-with-real-time-insights,"LDIMM0874,LDIMM0879"
+          167,how-to-care-for-a-loved-one-with-a-fever-a-practical-home-guide-for-families,"LDMICRO2028,LDMOL1912,LDHEM1057"
+          169,iron-rich-foods-that-fight-anemia-and-how-to-absorb-them-better,"LDIMM0568,LDHEM1057"
+          171,what-to-do-and-not-do-when-you-have-a-fever-at-home,"LDMICRO2028,LDMOL1912,LDHEM1057"
+          172,why-anemia-often-goes-undiagnosed-and-how-to-spot-the-signs-early,"LDIMM0568"
+          173,what-not-to-eat-when-you-have-a-fever-and-the-best-foods-for-faster-recovery,"LDMICRO2028,LDMOL1912"
+          176,protein-c-activity-normal-range-in-blood-test-explained,"LDIMM1276,LDBIO1098,LDBIO1101,LDCOA0512"
+          177,understanding-cat-dander-allergy-testing-causes-and-treatment,"LDALL1332,LDALL1485,LDIMM0863"
+          179,understanding-psa-levels-in-prostate-cancer-what-you-should-know,"LDIMM1096"
+          180,what-are-the-symptoms-of-high-bilirubin-in-adults-and-newborns,"LDBIO0058,LDBIO0590,LDBIO0125,LDBIO0202"
+          183,high-amylase-symptoms-causes-diagnosis-and-fluid-test-insights,"LDBIO0929,LDBIO0590"
+          184,how-a-urine-culture-and-sensitivity-test-helps-diagnose-infections,"LDMICRO2028"
+          186,how-to-know-the-symptoms-of-high-lipoprotein-a-warning-signs-and-risk-factors,"LDBIO0674,LDIMM0724,LDIMM0192,LDBIO0933"
+          187,interpreting-high-thyroglobulin-test-results-thyroglobulin-antibodies-and-how-to-reduce-them,"LDSER0188,LDSER0187,LDIMM1190,LDIMM0575"
+          188,luteinizing-hormone-blood-test-for-women-and-men,"LDIMM1186,LDIMM1092,LDIMM0169,LDCLI1148,LDIMM0569"
+          189,comprehensive-full-body-health-checkup-test-list-explained,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          190,anti-mitochondrial-antibody-test-normal-range-high-and-low-values-explained,"LDBIO0058,LDSER0179,LDSER0168"
+          191,complete-guide-to-serum-bicarbonate-test-uses-normal-and-abnormal-levels,"LDBIO0236"
+          192,egg-allergy-symptoms-testing-and-management-guide,"LDALL1332,LDIMM0863"
+          193,understanding-hepatitis-a-virus-igm-test-diagnosis-test-results-and-normal-range,"LDSER0652,LDSER1768"
+          194,understanding-dog-dander-allergy-causes-symptoms-and-testing,"LDALL0072,LDIMM0863"
+          195,what-is-hepatitis-b-understanding-causes-symptoms-and-diagnosis-methods,"LDMOL1466,LDSER1399"
+          196,what-is-an-extended-renal-function-test-everything-you-should-know,"LDBIO0965,LDBIO1085,LDBIO1159,LDBIO0258"
+          197,how-hepatitis-c-genotype-testing-influences-treatment-decisions,"LDMOL1466,LDMOL0645"
+          199,high-tibc-levels-explained-what-happens-if-tibc-is-high,"LDBIO1207"
+          200,c-peptide-levels-what-they-indicate-about-pancreatic-function,"LDIMM0277"
+          201,high-ferritin-levels-what-it-means-and-when-to-see-a-doctor,"LDBIO1207"
+          202,understanding-ca-125-levels-causes-of-high-and-low-readings,"LDIMM0287,LDIMM0285,LDMOL1635"
+          203,when-should-you-get-a-tb-test-symptoms-and-diagnosis-explained,"LDSER1113,LDMLD1591"
+          205,urea-nitrogen-test-symptoms-causes-and-when-to-get-tested,"LDBIO0965,LDBIO1085,LDBIO1159,LDBIO0258"
+          206,who-needs-a-g6pd-test-symptoms-and-risk-factors,"LDHEM0602,LDHEM0603"
+          208,understanding-karyotyping-by-g-banding-how-it-helps-in-genetic-diagnosis,"LDMOL0895"
+          209,high-amylase-levels-symptoms-causes-and-how-to-lower-amylase-levels,"LDBIO0929,LDBIO1209,LDBIO0240"
+          211,cervical-cancer-screening-importance-tests-and-guidelines,"LDMOL0731,LDCYT1048"
+          212,hepatitis-b-virus-causes-symptoms-and-diagnosis-procedures,"LDMOL1466,LDSER1399"
+          213,how-much-crp-level-is-dangerous-causes-of-high-crp-and-how-to-reduce-crp-level,"LDIMM0724"
+          214,lipid-profile-test-and-your-health-why-it-s-essential-to-monitor-cholesterol-levels,"LDBIO1225,LDBIO0646,LDBIO0915,LDBIO0916"
+          216,understanding-the-mcv-blood-test-what-it-reveals-about-your-health,"LDIMM0568"
+          221,serum-lipase-test-key-insights-into-pancreatic-health,"LDBIO0929,LDBIO1209,LDBIO0240"
+          222,advances-in-malaria-diagnosis-how-rdts-detect-parasites,"LDHEM0948,LDHEM1058"
+          223,crp-test-a-precise-tool-for-diagnosing-acute-and-chronic-inflammation,"LDIMM0724"
+          225,hemophilia-diagnosis-identifying-causes-and-symptoms,"LDHEM1279,LDHEM1398"
+          226,the-importance-of-diagnosing-chicken-allergies-tests-and-treatments,"LDALL0068"
+          227,immunoglobulins-and-antibodies-key-insights-from-the-igm-test,"LDBIO0752"
+          228,home-collection-safety-protocols-followed-by-lupin-diagnostics-phlebotomists,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          230,the-importance-of-potassium-testing-for-diagnosing-potassium-normal-range,"LDBIO1085,LDBIO1159"
+          231,how-to-protect-yourself-and-others-from-covid-19,"LDMOL0620"
+          232,prostate-health-screening-key-tests-every-man-should-consider,"LDIMM1096"
+          233,best-practice-for-a-diagnostics-laboratory-during-covid-19,"LDMOL0620"
+          234,abnormal-hemoglobin-the-role-of-hb-electrophoresis,"LDIMM0568"
+          235,how-the-hs-crp-test-can-help-identify-heart-disease-risks,"LDIMM0724,LDIMM0192,LDBIO0933"
+          237,importance-of-antiphospholipid-antibodies-in-blood-clotting-and-autoimmune-diseases,"LDSER0172,LDSER0173,LDIMM0174,LDIMM0223,LDIMM0222,LDSER0221,LDBIO0937"
+          238,essential-blood-tests-to-maintain-your-health-and-stay-informed,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          239,how-non-invasive-prenatal-screening-nipt-detects-genetic-conditions-early,"LDMOL0719"
+          240,fetal-hemoglobin-hb-f-test-why-it-s-important,"LDIMM0568"
+          241,fsh-lh-and-prolactin-understanding-their-role-in-female-reproductive-health,"LDIMM1186,LDIMM1092,LDIMM0169,LDIMM0569"
+          242,importance-of-widal-test-diagnosing-typhoid-infections,"LDSER1288,LDSER1287,LDMIC1327"
+          243,how-malaria-antigen-tests-detect-life-threatening-parasites,"LDHEM0948,LDHEM1058"
+          246,exploring-the-role-of-anti-mullerian-hormone-amh-in-male-and-female-reproductive-health,"LDIMM1186,LDIMM1092,LDIMM0169,LDIMM0569"
+          249,what-is-an-amh-blood-test-its-cost-procedure-and-normal-levels-by-age,"LDIMU0072,LDIMM0569"
+          250,when-is-the-h3-viral-marker-profile-test-hbsag-hcv-hiv-performed-test-cost-procedure-and-results,"LDSER0696,LDMOL0697,LDSER0693,LDMOL0645"
+          251,what-is-a-bilirubin-blood-test-causes-of-high-bilirubin-its-effects-on-health-and-test-costs,"LDBIO0058,LDBIO0590,LDBIO0125,LDBIO0202"
+          252,vitamin-b12-deficiency-test-symptoms-and-the-best-foods-to-naturally-boost-your-levels,"LDIMM1276"
+          253,understanding-hmpv-infection-causes-symptoms-and-diagnosis,"LDMOL1912"
+          254,signs-of-autoimmune-diseases-when-to-consider-an-interleukin-6-test,"LDIMM0880"
+          255,how-the-dengue-antibody-igm-elisa-test-helps-in-early-diagnosis,"LDSER1589,LDSER0464,LDMOL0461,LDSER0462"
+          256,folate-blood-test-understanding-its-importance-symptoms-of-high-folate-levels-and-test-results,"LDIMM1114"
+          257,the-role-of-histopathology-tests-in-disease-diagnosis-and-treatment,"LDHIS0683"
+          258,the-torch-panel-test-identifying-risk-factors-for-newborns,"LDSER1200,LDSER1201"
+          260,the-importance-of-blood-culture-tests-in-diagnosing-infections-fast,"LDMOL1912,LDMLD1591"
+          261,interpreting-your-ace-test-results-what-high-or-low-levels-could-indicate,"LDBIO0147"
+          263,the-role-of-the-aluminium-serum-test-in-health-monitoring,"LDBIO0127"
+          264,what-are-lipid-disorders-know-the-diagnosis-procedure,"LDIMM0724,LDIMM0192,LDBIO0933"
+          267,common-conditions-diagnosed-with-an-amylase-test,"LDBIO0929,LDBIO0590"
+          269,impact-of-molecular-diagnostics-revolutionizing-disease-detection,"LDMOL1635,LDMOL0731,LDMOL0697,LDMOL0661,LDMOL0645"
+          271,the-role-of-vitamin-k-in-your-health-insights-from-a-vitamin-k-test,"LDIMM1276"
+          272,understanding-hepatitis-tests-a-comprehensive-guide-for-early-detection,"LDSER0652,LDSER1768"
+          273,understanding-the-causes-of-dengue-fever-stages-and-diagnosis,"LDSER1589,LDSER0464,LDMOL0461,LDSER0462"
+          274,understanding-the-tests-included-in-lupikavach-vitamin-test,"LDLKP1537,LDLKP1864,LDLKP3004,LDLKP3006,LDLKP1872,LDLKP1875,LDLKP2999,LDLKP3005,LDLKP3001"
+          275,cholera-symptoms-decoded-when-to-act-fast-and-seek-help,"LDMIC1327"
+          276,key-blood-tests-in-an-antenatal-care-panel-how-to-interpret-the-results,"LDHEM0257,LDSER1201,LDSER1129,LDSER1128"
+          277,how-the-ana-test-can-help-you-understand-your-immune-health,"LDBIO0058"
+          279,the-future-of-autoimmune-antibody-testing-advances-and-innovations,"LDSER1713"
+          281,how-the-testosterone-blood-test-works-in-diagnosing-hormonal-imbalances,"LDIMM1186,LDIMM1185,LDCLI1148"
+          282,the-role-of-lipid-panel-tests-in-preventing-heart-disease,"LDIMM0724,LDIMM0192"
+          283,cpk-mb-normal-range-test-procedure-and-interpreting-results,"LDIMM0724,LDIMM0192"
+          284,how-vitamin-and-mineral-testing-can-benefit-your-health,"LDLKP3001"
+          286,what-are-the-reasons-for-increasing-cases-of-high-blood-pressure-in-adults,"LDIMM0192"
+          287,the-importance-of-immunohistochemistry-in-cancer-diagnosis,"LDHIS1805,LDHIS1655"
+          288,erythrocyte-sedimentation-rate-esr-test-know-your-inflammation-levels,"LDBIO1207"
+          289,understanding-the-role-of-acetylcholine-receptor-antibodies-in-blood-disorders,"LDSER0170,LDMOL1429"
+          293,when-to-consider-a-serum-glutamic-pyruvic-transaminase-test-for-liver-health,"LDBIO0058,LDBIO0590,LDBIO0125,LDBIO0202"
+          297,how-selenium-levels-impact-thyroid-and-immune-system-health,"LDBIO1794,LDIMM0575"
+          298,albumin-testing-role-of-the-albumin-creatinine-ratio-in-diagnosing-kidney-issues,"LDBIO0965,LDBIO1085,LDBIO1159,LDBIO0044,LDBIO0258"
+          301,how-to-diagnose-typhoid-fever-tests-and-procedures-explained,"LDSER0145,LDSER0438,LDMOL0486,LDMLD1591"
+          302,how-esr-test-helps-in-early-detection-of-inflammatory-disorders,"LDBIO1207"
+          303,widal-test-typhoid-fever-symptoms-and-normal-range,"LDSER0145,LDSER0438,LDMOL0486,LDMLD1591"
+          305,what-is-achr-antibody-blood-test-and-why-is-it-done,"LDSER0170,LDMOL1429"
+          311,sjogren-s-syndrome-symptoms-diagnosis-and-treatment,"LDIMM1457"
+          312,scleroderma-diagnoses-and-tests,"LDHEM0626,LDSER0177,LDIMM1235,LDSER0155,LDHIS0685,LDIMM1455"
+          313,signs-and-symptoms-of-autoimmune-disease,"LDBIO0058,LDSER0179,LDSER0168"
+          314,the-psychological-impact-of-thyroid-disorders-what-to-expect,"LDSER0188,LDSER0187"
+          316,the-role-of-urine-tests-in-diagnosing-kidney-and-bladder-issues,"LDBIO0058,LDBIO0590,LDBIO0125,LDBIO1564,LDBIO0202"
+          318,how-liver-function-tests-can-help-diagnose-medical-conditions,"LDBIO0058,LDBIO0590,LDBIO0125,LDBIO1564,LDBIO0202"
+          319,important-facts-you-need-to-know-about-haemogram-tests,"LDHEM0626"
+          320,follicle-stimulating-hormone-test-understanding-fsh-levels-by-age,"LDIMM1186,LDIMM1092,LDIMU0072,LDCLI1148,LDIMM0569"
+          322,liver-function-test-identifying-4-warning-signs-of-liver-damage,"LDBIO0590,LDBIO0125,LDBIO1564,LDBIO0202"
+          329,prenatal-aneuploidy-screening-with-dual-markers-in-first-trimester,"LDMOL0895"

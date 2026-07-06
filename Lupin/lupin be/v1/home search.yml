@@ -1,0 +1,44 @@
+info:
+  name: home search
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v1/home/search-data"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, /
+    - name: Accept-Language
+      value: en-US,en;q=0.9
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Origin
+      value: http://localhost:3001
+    - name: Referer
+      value: http://localhost:3001/
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: cross-site
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+  body:
+    type: json
+    data: '{"cityId":285,"stateId":19,"keyword":"urine culture con"}'
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

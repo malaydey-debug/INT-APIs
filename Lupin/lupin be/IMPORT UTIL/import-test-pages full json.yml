@@ -1,0 +1,30 @@
+info:
+  name: import-test-pages full json
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/import/test-page-v2s/import-full-json"
+  headers:
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: json_file
+        type: file
+        value:
+          - /C:/Users/Malay Dey/Desktop/iron_new.json
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

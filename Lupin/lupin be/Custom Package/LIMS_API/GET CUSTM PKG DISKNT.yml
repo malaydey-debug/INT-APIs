@@ -1,0 +1,27 @@
+info:
+  name: GET CUSTM PKG DISKNT
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://lims.lupindiagnostics.com/HomeCollectionAPI/API/WebSite/CustomPackageDiscountData
+  headers:
+    - name: Authorization
+      value: Bearer {{lims-token}}
+  body:
+    type: multipart-form
+    data:
+      - name: TestDetail
+        type: text
+        value: '[{"Rate":"85.000000","itemid":"242","TestCode":"LDBIO0253","PaidAmt":"85.000000","SubCategoryID":"1","DiscAmt":"0.00","ItemType":"Test","ItemName":"Blood Glucose Fasting (FBS)","NetAmt":"85.000000"},{"Rate":"90.000000","itemid":"244","TestCode":"LDBIO0255","PaidAmt":"90.000000","SubCategoryID":"1","DiscAmt":"0.00","ItemType":"Test","ItemName":"Blood Glucose Post prandial (PPBS)","NetAmt":"90.000000"},{"Rate":"110.000000","itemid":"368","TestCode":"LDHEM0379","PaidAmt":"110.000000","SubCategoryID":"2","DiscAmt":"0.00","ItemType":"Test","ItemName":"Complete Urine Examination","NetAmt":"110.000000"},{"Rate":"220.000000","itemid":"396","TestCode":"LDBIO0408","PaidAmt":"220.000000","SubCategoryID":"1","DiscAmt":"0.00","ItemType":"Test","ItemName":"Creatinine, Serum","NetAmt":"220.000000"}]'
+      - name: CentreCode
+        type: text
+        value: NRL0001
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

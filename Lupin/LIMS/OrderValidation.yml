@@ -1,0 +1,72 @@
+info:
+  name: OrderValidation
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: http://20.193.244.108/HomeCollectionAPI/api/HomeAPI/OrderValidation
+  headers:
+    - name: Authorization
+      value: Bearer ew0KICAiYWxnIjogImh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI2htYWMtc2hhMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAic3ViIjogImhjX3dlYnNpdGUiLA0KICAidW5pcXVlX25hbWUiOiAiV2Vic2l0ZSIsDQogICJqdGkiOiAiNzVkNTBmNDItOGY1MC00N2YwLWJiYTYtYTQ1ZWI2NWQ2YTJkIiwNCiAgImlhdCI6ICI5LzE2LzIwMjEgMTE6Mzc6MzEgQU0iLA0KICAibmJmIjogMTYzMTc3MjQ1MSwNCiAgImV4cCI6IDE2MzE3ODY4NTEsDQogICJpc3MiOiAiVGVzdC5jb20iLA0KICAiYXVkIjogIlRlc3QuY29tIg0KfQ.3juZ6Ev_UfL5c_CAahGZlOHVgkaUHePqFx4gZrf4BC8
+  body:
+    type: multipart-form
+    data:
+      - name: HomeCollectionData
+        type: text
+        value: |
+          {
+            "Patient_ID": "",
+            "Title": "Mr.",
+            "PName": "Abc Def",
+            "Gender": "MALE",
+            "DOB": "31 Dec 1959",
+            "Mobile": "+919739572890",
+            "Alternatemobileno": "+919739572890",
+            "Email": "",
+            "LocalityID": "3716",
+            "Pincode": "110043",
+            "House_No": "Room no. 204, 7 Hills Veera Venkata PG Marathahalli, Bengaluru",
+            "Landmark": "",
+            "Appdatetime": "17-Sep-2021 06:00",
+            "Client": "Website",
+            "Paymentmode": "Cash",
+            "Latitude": 12.9585644,
+            "Longitude": 77.70916679999999,
+            "ReferedDoctor": "Self",
+            "DoctorID": 0,
+            "SlotID":"5_06:00",
+            "TestDetail": [
+              {
+                "DiscAmt": 0,
+                "itemid": 1,
+                "ItemName": "Glucose-6 Phosphate Dehydrogenase (G6PD), Qualitative",
+                "Itemtype": "Test",
+                "NetAmt": "40",
+                "PaidAmt": 0,
+                "Rate": "40",
+                "SubCategoryID": 6,
+                "TestCode": "LDHEM0602"
+              },
+              {
+                "DiscAmt": 0,
+                "itemid": 2048,
+                "ItemName": "",
+                "Itemtype": "TEST",
+                "NetAmt": 200,
+                "PaidAmt": 0,
+                "Rate": 200,
+                "SubCategoryID": 0,
+                "TestCode": "OT007"
+              }
+            ],
+            "IsPaid": 0,
+            "AttachmentData": []
+          }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

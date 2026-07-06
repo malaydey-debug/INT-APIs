@@ -1,0 +1,65 @@
+info:
+  name: Add Referral
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/refer_friend/add_referral"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-GB,en-US;q=0.9,en;q=0.8
+    - name: Cache-Control
+      value: no-cache
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Origin
+      value: https://preprod.lupindiagnostics.com
+    - name: Pragma
+      value: no-cache
+    - name: Referer
+      value: https://preprod.lupindiagnostics.com/
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-site
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+  body:
+    type: json
+    data: "{\r
+
+      \    \"mobile\": \"8527048610\", // may have country code\r
+
+      \    \"title\": \"Dr.\", // [\"Mr.\",\"Mrs.\",\"Miss.\",\"Master\",\"Baby.\",\"B/O.\",\"Dr.\",\"Prof.\",\"Madam.\",\"Sister.\",\"Mohd.\",\"Mx\",\"NA\"]\r
+
+      \    \"name\": \"Sujoyee Banerjee\", // title case fullname\r
+
+      \    \"gender\": \"male\", // male, female, other\r
+
+      \    \"age\": \"24\", // age in years\r
+
+      \    \"target_mobile\": \"8240767962\",\r
+
+      \    \"request_id\": \"5F6585D827AC466984971671E8F0E09B\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

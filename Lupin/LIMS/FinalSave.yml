@@ -1,0 +1,15 @@
+info:
+  name: FinalSave
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: http://20.193.244.108/homecollectionapi/api/Home/FinalSave
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

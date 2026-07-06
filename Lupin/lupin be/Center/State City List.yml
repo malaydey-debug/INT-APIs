@@ -1,0 +1,28 @@
+info:
+  name: State City List
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{lupin_be}}/api/v2/state_city_list"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-GB,en-US;q=0.9,en;q=0.8
+    - name: Cache-Control
+      value: no-cache
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer a2499748-9486-4a0b-8996-50d6ea6eb28b
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

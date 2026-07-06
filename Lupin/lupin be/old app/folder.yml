@@ -1,0 +1,7 @@
+info:
+  name: old app
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

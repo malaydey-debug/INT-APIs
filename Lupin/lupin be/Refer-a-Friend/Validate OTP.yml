@@ -1,0 +1,26 @@
+info:
+  name: Validate OTP
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/refer_friend/validate_otp"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "mobile": "8240767963",
+          "request_id": "5F6585D827AC466984971671E8F0E09B",
+          "otp": "637208"
+        }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

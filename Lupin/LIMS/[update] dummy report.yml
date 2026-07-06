@@ -1,0 +1,24 @@
+info:
+  name: "[update] dummy report"
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/api/DummyReport/GetDummyReport
+  headers:
+    - name: Authorization
+      value: Bearer {{lims-token}}
+  body:
+    type: multipart-form
+    data:
+      - name: TestCode
+        type: text
+        value: LDALL1557
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

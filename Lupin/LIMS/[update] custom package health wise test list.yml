@@ -1,0 +1,24 @@
+info:
+  name: "[update] custom package health wise test list"
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/api/HomeAPI/GetComparePackageMaster
+  headers:
+    - name: Authorization
+      value: Bearer ew0KICAiYWxnIjogImh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI2htYWMtc2hhMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAic3ViIjogImhjX3dlYnNpdGUiLA0KICAidW5pcXVlX25hbWUiOiAiV2Vic2l0ZSIsDQogICJqdGkiOiAiODZkNmU5NTUtYWE2YS00YzgzLWIzNGYtOGNjYzUyMTZhM2ZjIiwNCiAgImlhdCI6ICIxMi84LzIwMjUgNjowNDo0OCBQTSIsDQogICJuYmYiOiAxNzY1MTk3Mjg4LA0KICAiZXhwIjogMTc2NTIxMTY4OCwNCiAgImlzcyI6ICJUZXN0LmNvbSIsDQogICJhdWQiOiAiVGVzdC5jb20iDQp9._sh1qKF0rmrR_B4A8zNgIbn6v_v49gpsZ3wRRUtKmqc
+  body:
+    type: multipart-form
+    data:
+      - name: HealthCondition
+        type: text
+        value: Fat
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

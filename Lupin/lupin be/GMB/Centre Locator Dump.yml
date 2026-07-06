@@ -1,0 +1,19 @@
+info:
+  name: Centre Locator Dump
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://prod2-backend.rightchoice.ai/lupin/all-urls?vendor=lupin
+  params:
+    - name: vendor
+      value: lupin
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

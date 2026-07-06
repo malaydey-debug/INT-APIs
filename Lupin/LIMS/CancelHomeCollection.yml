@@ -1,0 +1,30 @@
+info:
+  name: CancelHomeCollection
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: http://20.193.244.108/HomeCollectionAPI/api/HomeAPI/CancelHomeCollection
+  headers:
+    - name: Authorization
+      value: Bearer ew0KICAiYWxnIjogImh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI2htYWMtc2hhMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAic3ViIjogImhjX3dlYnNpdGUiLA0KICAidW5pcXVlX25hbWUiOiAiV2Vic2l0ZSIsDQogICJqdGkiOiAiMDY2NGZlNjMtYWJmNC00MDBhLWJkNWMtNTAwNTA1YTFhYTE0IiwNCiAgImlhdCI6ICI5LzE2LzIwMjEgMzo1NDo1MyBQTSIsDQogICJuYmYiOiAxNjMxNzg3ODkzLA0KICAiZXhwIjogMTYzMTgwMjI5MywNCiAgImlzcyI6ICJUZXN0LmNvbSIsDQogICJhdWQiOiAiVGVzdC5jb20iDQp9.Y-kwSDEce5vlezdGRxcRXKhlznXFS1m1onLOWJjHKw4
+  body:
+    type: multipart-form
+    data:
+      - name: Client
+        type: text
+        value: Website
+      - name: PrebookingID
+        type: text
+        value: "26"
+      - name: CancelRemarks
+        type: text
+        value: Cancel This
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,122 @@
+info:
+  name: Lead Push
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/lead/push-prescription"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-GB,en-US;q=0.9,en;q=0.8
+    - name: Cache-Control
+      value: no-cache
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Origin
+      value: https://preprod.lupindiagnostics.com
+      disabled: true
+    - name: Pragma
+      value: no-cache
+    - name: Referer
+      value: https://preprod.lupindiagnostics.com/
+      disabled: true
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-site
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+  body:
+    type: multipart-form
+    data:
+      - name: fullname
+        type: text
+        value: Himanshu Sharma
+        description: required
+      - name: phone
+        type: text
+        value: "7566037009"
+        description: required
+      - name: email
+        type: text
+        value: sharma
+        description: required
+      - name: upload
+        type: file
+        value:
+          - /D:/image3.png
+        description: optional
+        disabled: true
+      - name: city
+        type: text
+        value: mumbai
+        description: required
+      - name: utm_source
+        type: text
+        value: ""
+        description: optional
+        disabled: true
+      - name: lead_source
+        type: text
+        value: ""
+        description: optional
+        disabled: true
+      - name: campaign_title
+        type: text
+        value: ""
+        description: optional
+        disabled: true
+      - name: package_name
+        type: text
+        value: ""
+        description: optional
+        disabled: true
+      - name: utm_medium
+        type: text
+        value: ""
+        description: optional
+        disabled: true
+      - name: utm_zone
+        type: text
+        value: ""
+        description: optional
+        disabled: true
+      - name: utm_ad_group
+        type: text
+        value: ""
+        description: optional
+        disabled: true
+      - name: utm_keyword
+        type: text
+        value: ""
+        description: optional
+        disabled: true
+      - name: feedback
+        type: text
+        value: Hello
+        description: optional
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+docs: |-
+  supports prescriptions.
+
+  only allows form data

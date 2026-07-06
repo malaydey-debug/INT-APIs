@@ -1,0 +1,24 @@
+info:
+  name: Get Test for Health Condition
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/custom_package/get_tests_for_health_cond"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "health_condition": "Diabetes Mellitus"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,47 @@
+info:
+  name: LIMS home search
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{lims_url}}/HomeCollectionAPI/api/HomeAPI/GetKeywordSearchData"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, /
+    - name: Accept-Language
+      value: en-US,en;q=0.9
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Origin
+      value: http://localhost:3001
+    - name: Referer
+      value: http://localhost:3001/
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: cross-site
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+  body:
+    type: json
+    data: '{"CityID":285,"StateID":19,"keyword":"urine culture"}'
+  auth:
+    type: bearer
+    token: ew0KICAiYWxnIjogImh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI2htYWMtc2hhMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAic3ViIjogImhjX3dlYnNpdGUiLA0KICAidW5pcXVlX25hbWUiOiAiV2Vic2l0ZSIsDQogICJqdGkiOiAiMDcxMzYyNTAtOGU5ZC00ZmQ3LWFjMjMtMmQ4NTg4YzgyODBkIiwNCiAgImlhdCI6ICI2LzE1LzIwMjYgNDowNDo0OCBQTSIsDQogICJuYmYiOiAxNzgxNTE5Njg4LA0KICAiZXhwIjogMTc4MTUzNDA4OCwNCiAgImlzcyI6ICJUZXN0LmNvbSIsDQogICJhdWQiOiAiVGVzdC5jb20iDQp9.RZfnfc7Fbx66IhGAcM7LrI-1XtZh2Gax44XKLmGnaBw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

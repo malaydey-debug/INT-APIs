@@ -1,0 +1,30 @@
+info:
+  name: import Blog Into Testv2
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/import/test-page-v2s/import-blog-mapping"
+  headers:
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: ""
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: csv_file
+        type: file
+        value:
+          - /C:/Users/Malay Dey/Desktop/Projects/lupin/Lupin/blog_rel_to_test/BlogsTestV2_Mar_Apr.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

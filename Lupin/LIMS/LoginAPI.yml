@@ -1,0 +1,27 @@
+info:
+  name: LoginAPI
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://lims.lupindiagnostics.com/HomeCollectionAPI/api/LoginAPI
+  body:
+    type: multipart-form
+    data:
+      - name: Client
+        type: text
+        value: "{{lims-client}}"
+      - name: UserName
+        type: text
+        value: "{{lims-user-name}}"
+      - name: Password
+        type: text
+        value: "{{lims-password}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

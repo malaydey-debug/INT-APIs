@@ -1,0 +1,32 @@
+info:
+  name: import-meta-tags
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/import/test-page-v2s/import-meta-tags"
+  headers:
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+  body:
+    type: multipart-form
+    data:
+      - name: client
+        type: text
+        value: import_handle
+      - name: csv_file
+        type: file
+        value:
+          - /C:/Users/Malay Dey/Desktop/LupinDiagnosticsTestMetaTags16June2026.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

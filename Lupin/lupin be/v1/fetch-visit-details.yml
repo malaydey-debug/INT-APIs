@@ -1,0 +1,43 @@
+info:
+  name: fetch-visit-details
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://api-new.lupindiagnostics.com/api/v1/home/fetch-visit-details
+  headers:
+    - name: Accept
+      value: "*/*"
+    - name: Accept-Language
+      value: en-US,en;q=0.9
+    - name: Access-Control-Request-Headers
+      value: content-type
+    - name: Access-Control-Request-Method
+      value: POST
+    - name: Connection
+      value: keep-alive
+    - name: Origin
+      value: https://www.lupindiagnostics.com
+    - name: Referer
+      value: https://www.lupindiagnostics.com/
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-site
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+  body:
+    type: json
+    data: '{"mobile":"9867661046"}'
+  auth:
+    type: bearer
+    token: ew0KICAiYWxnIjogImh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI2htYWMtc2hhMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAic3ViIjogImhjX3dlYnNpdGUiLA0KICAidW5pcXVlX25hbWUiOiAiV2Vic2l0ZSIsDQogICJqdGkiOiAiMTM1OTAwZmItNWM5Ny00ZjZkLTk2ZDAtOTM0NjVlYTlmMjMwIiwNCiAgImlhdCI6ICIzLzIvMjAyNiAzOjU4OjU3IFBNIiwNCiAgIm5iZiI6IDE3NzI0NDczMzcsDQogICJleHAiOiAxNzcyNDYxNzM3LA0KICAiaXNzIjogIlRlc3QuY29tIiwNCiAgImF1ZCI6ICJUZXN0LmNvbSINCn0.X93pmuRg2enFx7X5Gj80BioT6PIypf8k2saJZ_93hwE
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

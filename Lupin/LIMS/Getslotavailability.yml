@@ -1,0 +1,33 @@
+info:
+  name: Getslotavailability
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: http://20.193.244.108/HomeCollectionAPI/api/HomeAPI/Getslotavailability
+  headers:
+    - name: Authorization
+      value: bearer ew0KICAiYWxnIjogImh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI2htYWMtc2hhMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAic3ViIjogImhjX3dlYnNpdGUiLA0KICAidW5pcXVlX25hbWUiOiAiV2Vic2l0ZSIsDQogICJqdGkiOiAiZDIxMmYzNDMtNTcyZi00MTNkLTlhMWEtOWM5YWQzYTRjYWVjIiwNCiAgImlhdCI6ICIxMi8yMC8yMDIxIDI6NTU6MzggUE0iLA0KICAibmJmIjogMTYzOTk5MjMzOCwNCiAgImV4cCI6IDE2NDAwMDY3MzgsDQogICJpc3MiOiAiVGVzdC5jb20iLA0KICAiYXVkIjogIlRlc3QuY29tIg0KfQ.xdlxInhkEfiQZc2G6esME2Df47ww2KsTzoZK6ndAoco
+  body:
+    type: multipart-form
+    data:
+      - name: AppointmentDate
+        type: text
+        value: 21-Dec-2021
+      - name: AppointmentTime
+        type: text
+        value: 07:30
+      - name: Latitude
+        type: text
+        value: "19.074325"
+      - name: Longitude
+        type: text
+        value: "73.019024"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

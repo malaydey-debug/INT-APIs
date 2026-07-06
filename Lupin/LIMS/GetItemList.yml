@@ -1,0 +1,30 @@
+info:
+  name: GetItemList
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/api/HomeAPI/GetItemList
+  headers:
+    - name: Authorization
+      value: Bearer {{lims-token}}
+  body:
+    type: multipart-form
+    data:
+      - name: StateID
+        type: text
+        value: "19"
+      - name: CityID
+        type: text
+        value: "285"
+      - name: itemCode
+        type: text
+        value: ""
+        disabled: true
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

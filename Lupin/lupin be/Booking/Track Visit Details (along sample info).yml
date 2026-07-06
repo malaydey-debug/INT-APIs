@@ -1,0 +1,205 @@
+info:
+  name: Track Visit Details (along sample info)
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/booking/track_visit_details"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer <LIMS_TOKEN_HERE>
+    - name: Cookie
+      value: connect.sid=<SESSION_COOKIE>
+  body:
+    type: json
+    data: |-
+      {
+        "VisitNo": "LNRL2129"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: With Valid Visit Id
+    request:
+      url: "{{lupin_be}}/api/v2/booking/track_visit_details"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+        - name: Authorization
+          value: Bearer <LIMS_TOKEN_HERE>
+        - name: Cookie
+          value: connect.sid=<SESSION_COOKIE>
+      body:
+        type: json
+        data: |-
+          {
+            "VisitNo": "LNRL2129"
+          }
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "666"
+        - name: ETag
+          value: W/"29a-Gy4ACb2mioVh4XfnVimdG7bZJ+g"
+        - name: Set-Cookie
+          value: connect.sid=s%3AQLh_rKwtvn78a6iPP2GE4ryYMpeorUip.vwFl8FtnCdNZtWvCLaswS%2FupRwr%2BUp2ZPLMFvZ0Hj8Q; Path=/; Expires=Mon, 26 Jan 2026 06:45:15 GMT; HttpOnly
+        - name: Vary
+          value: Accept-Encoding
+        - name: Date
+          value: Sun, 25 Jan 2026 06:45:15 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 200,
+              "message": "track visit detail",
+              "data": {
+                  "status": true,
+                  "message": "Success",
+                  "data": [
+                      {
+                          "VisitID": "LNRL2129",
+                          "UHID": "LDAA00003551",
+                          "PName": "Mr.ADITYA",
+                          "Age": "31 Y 2 M 14 D ",
+                          "Gender": "Male",
+                          "Mobile": "8377097083",
+                          "Booking Centre": "NRL MUMBAI",
+                          "Reg Date": "30-Jan-2025 07:48 PM",
+                          "BookingType": "Center Visit",
+                          "TestDetail": [
+                              {
+                                  "TestCode": "LDBIO0042",
+                                  "TestName": "ALBUMIN QUANTITATIVE, 24 HOURS URINE",
+                                  "Department": "BIOCHEMISTRY",
+                                  "TestStatus": "Sample Collected",
+                                  "Entry Date": "30-Jan-2025 07:48 PM",
+                                  "Delivery Date": "31-Jan-2025 06:30 PM",
+                                  "Sample Collection Date": "30-Jan-2025 07:48 PM",
+                                  "Department Receive Date": "",
+                                  "Result Entered Date": "",
+                                  "Approved Date": ""
+                              }
+                          ]
+                      }
+                  ]
+              }
+          }
+  - name: With invalid Visit id
+    request:
+      url: "{{lupin_be}}/api/v2/booking/track_visit_details"
+      method: POST
+      headers:
+        - name: Content-Type
+          value: application/json
+        - name: Authorization
+          value: Bearer <LIMS_TOKEN_HERE>
+        - name: Cookie
+          value: connect.sid=<SESSION_COOKIE>
+      body:
+        type: json
+        data: |-
+          {
+            "VisitNo": "LNRL21299"
+          }
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "83"
+        - name: ETag
+          value: W/"53-9g+knGcHKmuV8Xrs3qLUdmJ3iRE"
+        - name: Set-Cookie
+          value: connect.sid=s%3AY87IL-lKe1ivFVUv6eGwJuHITYF3eqK2.DrIe%2F%2FiA5F%2FOL6j35ryoFI1YllGa8iJk4syTNRabTU0; Path=/; Expires=Mon, 26 Jan 2026 06:46:02 GMT; HttpOnly
+        - name: Vary
+          value: Accept-Encoding
+        - name: Date
+          value: Sun, 25 Jan 2026 06:46:02 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 404,
+              "data": {
+                  "status": false,
+                  "message": "No Record Found.",
+                  "data": "[]"
+              }
+          }

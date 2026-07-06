@@ -1,0 +1,29 @@
+info:
+  name: GetAvailableSlot
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://lims.lupindiagnostics.com/HomeCollectionAPI/api/HomeAPI/GetAvailableSlot
+  headers:
+    - name: Authorization
+      value: Bearer {{lims-token}}
+  body:
+    type: multipart-form
+    data:
+      - name: AreaID
+        type: text
+        value: "29814"
+      - name: Pincode
+        type: text
+        value: "110043"
+      - name: AppointmentDate
+        type: text
+        value: 2021-09-17
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

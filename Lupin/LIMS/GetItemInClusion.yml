@@ -1,0 +1,31 @@
+info:
+  name: GetItemInClusion
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/api/HomeAPI/GetItemInClusion
+  headers:
+    - name: Authorization
+      value: Bearer {{lims-token}}
+  body:
+    type: multipart-form
+    data:
+      - name: ItemID
+        type: text
+        value: "2512"
+        disabled: true
+      - name: ItemID
+        type: text
+        value: "2491"
+      - name: ItemID
+        type: text
+        value: "2392"
+        disabled: true
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

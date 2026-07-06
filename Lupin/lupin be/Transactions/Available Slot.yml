@@ -1,0 +1,25 @@
+info:
+  name: Available Slot
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: http://
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: New Request
+    request:
+      url: http://
+      method: GET
+    response:
+      body:
+        type: text
+        data: ""

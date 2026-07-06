@@ -1,0 +1,365 @@
+info:
+  name: General Request
+  type: graphql
+  seq: 1
+
+graphql:
+  method: POST
+  url: http://localhost:3000/api/v2/fastql
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-GB,en-US;q=0.9,en;q=0.8
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Origin
+      value: https://dev-new.lupindiagnostics.com
+    - name: Referer
+      value: https://dev-new.lupindiagnostics.com/
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-site
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Not(A:Brand";v="8", "Chromium";v="144", "Google Chrome";v="144"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+    - name: Cookie
+      value: connect.sid=s%3AiPDLGAEzPQaqB_bNdbEY_gmPF6s2CkyO.PdEAb68X43QOJlt7%2FTl2NefWX50X2TI9Iy4sFvVe9Yc
+  body:
+    query: |+
+      
+      {
+          primaryCities: cityLists(
+              filters: { Category: { eq: "PRIMARY" } }
+              sort: "City:asc"
+              pagination: { limit: -1 }
+          ) {
+              data {
+                  id
+                  attributes {
+                      City
+                      city_id
+                      state_id
+                      Category
+                  }
+              }
+          }
+          secondaryCities: cityLists(
+              filters: { Category: { eq: "SECONDARY" } }
+              sort: "City:asc"
+              pagination: { limit: -1 }
+          ) {
+              data {
+                  id
+                  attributes {
+                      City
+                      city_id
+                      state_id
+                      Category
+                  }
+              }
+          }
+          allCities: cityLists(sort: "City:asc", pagination: { limit: -1 }) {
+              data {
+                  id
+                  attributes {
+                      City
+                      city_id
+                      state_id
+                      Category
+                  }
+              }
+          }
+          homepageMetatag {
+              data {
+                  attributes {
+                      meta_tags {
+                          meta_title
+                          meta_description
+                          schema
+                          meta_image {
+                              data {
+                                  attributes {
+                                      url
+                                  }
+                              }
+                          }
+                      }
+                      lupin_diagnostics {
+                          Description
+                          Text
+                      }
+                      certifications {
+                          ... on ComponentTextTextBox {
+                              Text
+                              Description
+                          }
+                          ... on ComponentTextCard {
+                              cta
+                              display_type
+                              content
+                              title
+                              image {
+                                  data {
+                                      attributes {
+                                          caption
+                                          url
+                                      }
+                                  }
+                              }
+                          }
+                          ... on ComponentTextCardGp {
+                              display_type
+                              body
+                              title
+                              show_details
+                              cards {
+                                  cta
+                                  title
+                                  content
+                                  display_type
+                                  image {
+                                      data {
+                                          attributes {
+                                              url
+                                              caption
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                      key_usp {
+                          Image {
+                              data {
+                                  attributes {
+                                      caption
+                                      url
+                                  }
+                              }
+                          }
+                          mobile_image {
+                              data {
+                                  attributes {
+                                      caption
+                                      url
+                                  }
+                              }
+                          }
+                          description
+                          title
+                      }
+                      health_section {
+                          display_type
+                          body
+                          title
+                          show_details
+                          cards {
+                              display_type
+                              cta
+                              content
+                              image {
+                                  data {
+                                      attributes {
+                                          caption
+                                          url
+                                      }
+                                  }
+                              }
+                              title
+                          }
+                      }
+                  }
+              }
+          }
+          homePageBanners(sort: "order:asc") {
+              data {
+                  id
+                  attributes {
+                      title
+                      description
+                      link_text
+                      link
+                      order
+                      desktop_image {
+                          data {
+                              attributes {
+                                  url
+                              }
+                          }
+                      }
+                      mobile_image {
+                          data {
+                              attributes {
+                                  url
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+          packageCodes {
+              data {
+                  id
+                  attributes {
+                      code
+                  }
+              }
+          }
+          testCodes {
+              data {
+                  id
+                  attributes {
+                      code
+                  }
+              }
+          }
+          bestInClasses {
+              data {
+                  id
+                  attributes {
+                      title
+                      desktop_icon {
+                          data {
+                              attributes {
+                                  url
+                              }
+                          }
+                      }
+                      mobile_icon {
+                          data {
+                              attributes {
+                                  url
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+          testimonials {
+              data {
+                  id
+                  attributes {
+                      name
+                      description
+                      location
+                      status
+                      promote_to_homepage
+                      centre_id
+                      order
+                      image {
+                          data {
+                              attributes {
+                                  url
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+          informativeVideos {
+              data {
+                  id
+                  attributes {
+                      title
+                      category
+                      thumbnail {
+                          data {
+                              attributes {
+                                  url
+                              }
+                          }
+                      }
+                      duration
+                      youtube_url
+                      status
+                      promote_to_homepage
+                      order
+                  }
+              }
+          }
+          posts(pagination: { limit: -1 }) {
+              data {
+                  id
+                  attributes {
+                      title
+                      post_category {
+                          data {
+                              attributes {
+                                  title
+                              }
+                          }
+                      }
+                      updatedAt
+                      createdAt
+                      image {
+                          data {
+                              attributes {
+                                  url
+                              }
+                          }
+                      }
+                      slug
+                      seo_title
+                      meta_description
+                      sort_id
+                      status
+                  }
+              }
+          }
+          faqs(
+          filters: {
+            faq_category: {
+              publishedAt: { notNull: true }
+            }
+          }
+          sort: ["order:asc"]
+          pagination: { limit: -1 }
+        ) {
+          data {
+            id
+            attributes {
+              question
+              answer
+              order
+              faq_category {
+                data {
+                  attributes {
+                    category
+                    publishedAt
+                  }
+                }
+              }
+            }
+          }
+        }
+          healthCheckupInCities(pagination: { limit: -1 }) {
+              data {
+                  id
+                  attributes {
+                      city
+                      city_id
+                      state_id
+                      order
+                  }
+              }
+          }
+      }
+
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

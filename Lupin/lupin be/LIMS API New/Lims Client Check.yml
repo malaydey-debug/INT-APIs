@@ -1,0 +1,29 @@
+info:
+  name: Lims Client Check
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/API/LupiPlusClientCheck/ClientCheck
+  headers:
+    - name: UserName
+      value: LupiPlusUAT
+    - name: password
+      value: LupIPlus@#26!05$&UAT
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+         
+          "ClientID": "469E62172566D190E989F2F5745022E4"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

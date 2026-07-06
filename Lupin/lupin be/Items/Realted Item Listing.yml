@@ -1,0 +1,53 @@
+info:
+  name: Realted Item Listing
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/item/related_item"
+  headers:
+    - name: Accept
+      value: application/json, text/plain, */*
+    - name: Accept-Language
+      value: en-GB,en-US;q=0.9,en;q=0.8
+    - name: Cache-Control
+      value: no-cache
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Pragma
+      value: no-cache
+    - name: Sec-Fetch-Dest
+      value: empty
+    - name: Sec-Fetch-Mode
+      value: cors
+    - name: Sec-Fetch-Site
+      value: same-site
+    - name: User-Agent
+      value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+    - name: sec-ch-ua
+      value: '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"'
+    - name: sec-ch-ua-mobile
+      value: ?0
+    - name: sec-ch-ua-platform
+      value: '"Windows"'
+    - name: Cookie
+      value: connect.sid=s%3A7v1xGblXcGZQlC4AlUCTD8t5Y4AQ9F2G.Qog5W9sVZo%2FuXcrodz9dPYdCzJ39U3iHj36s4qRyvVM
+  body:
+    type: json
+    data: "{\r
+
+      \    // \"exclude_related_item_codes\": [\"LDHEM0378\"],\r
+
+      \    \"item_codes\": [\"LDALL0065\", \"LDHEM0378\"]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

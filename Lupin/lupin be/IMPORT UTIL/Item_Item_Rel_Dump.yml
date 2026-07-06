@@ -1,0 +1,726 @@
+info:
+  name: Item_Item_Rel_Dump
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{lupin_be}}/api/v2/import/item_item_rel"
+  headers:
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: 2026_02_12_dev
+    request:
+      url: "{{lupin_be}}/api/v2/import/item_item_rel"
+      method: GET
+      headers:
+        - name: Connection
+          value: keep-alive
+        - name: Content-Type
+          value: application/json
+        - name: Authorization
+          value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 12 Feb 2026 17:37:28 GMT
+        - name: Content-Type
+          value: text/csv; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Disposition
+          value: attachment; filename="blog-related-tests.csv"
+        - name: ETag
+          value: W/"320e-KRXjdxI0x+R0TIFDbx7TZvsP8D4"
+        - name: Set-Cookie
+          value: connect.sid=s%3AfQWRRTBnKdxHc5iUJRGderQE87_QBu_4.Q8o%2FZ9%2BxLwsP%2FYq9byTk4YrJnFFmGwL06EVqlJOlIxk; Path=/; Expires=Fri, 13 Feb 2026 17:37:28 GMT; HttpOnly
+        - name: Vary
+          value: Accept-Encoding
+        - name: Content-Encoding
+          value: br
+      body:
+        type: text
+        data: |
+          item_id,item_code,item_alias,related_test_csv
+          1,LDHEM0378,complete-blood-count-cbc,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          3,LDHEM0626,hemogram-cbc-with-esr-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          4,LDMIC1328,culture-and-sensitivity-urine-vitex-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          5,LDBIO0904,renal-function-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          6,LDIMM0528,ferritin-test,"LDHEM1044, LDHEM0378"
+          7,LDBIO0882,iron-studies-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          9,LDIMM0874,Insulin-Fasting-Test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          11,LDIMM1186,testosterone-total-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          12,LDIMM1192,thyroid-profile-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          13,LDLKP1537,lupikavach-vitamin-check-jasmine,"LDIMM1360, LDIMM1361"
+          15,LDSER0657,hepatitis-b-surface-antigen-hbsag-rapid-method,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          16,LDIMM1314,dengue-fever-antibodies-igg-igm-elisa-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          17,LDSER1589,dengue-ns1-antigen-elisa-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          18,LDALL0064,allergy-aspergillus-fumigatus,"LDALL1345, LDHEM0378"
+          20,LDSER0464,dengue-ns1-antigen-rapid-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          21,LDSER0668,Hepatitis-C-Antibodies-HCV-Rapid-Test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          22,LDALL0065,allergy-bermuda-grass,"LDALL1345, LDHEM0378"
+          24,LDSER1122,rheumatoid-factor-ra-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          25,LDIMM0292,calcium,"LDIMM1274, LDIMM1110, LDBIO1073, LDBIO0944, LDBIO0044"
+          26,LDSER0154,anti-ccp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          27,LDALL0065,allergy-candida-albicans,"LDALL1345, LDHEM0378"
+          28,LDIMM1268,vitamin-b12-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          29,LDSER0143,antinuclear-antibody-ana-ifa-in-dilutions-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          30,LDSER0141,antinuclear-antibody-ana-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          31,LDBIO0674,high-sensitivity-c-reactive-protein-hs-crp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          33,LDALL0068,allergy-chicken,"LDALL0078, LDALL0112, LDHEM0378, LDALL1345, LDALL1345"
+          35,LDBIO0360,cholesterol-total-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          37,LDBIO0929,lipase-lps-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          38,LDBIO0965,microalbumin-spot-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          40,LDBIO0402,c-reactive-protein-crp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          42,LDIMM1195,thyroid-stimulating-hormone-tsh-ultrasensitive-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          43,LDBIO1085,potassium,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          44,LDSER0188,Anti-TPO-Thyroid-Peroxidase-Antibody-Test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          46,LDSER1262,vdrl-rpr-serum,"LDHEM0378, LDSER0657, LDHEM0379"
+          48,LDIMM0879,insulin-post-prandial-pp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          49,LDBIO1073,phosphorous-serum,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          51,LDIMM0963,microalbumin-creatinine-ratio-spot-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          52,LDALL0072,allergy-dog-dander,"LDALL1345, LDHEM0378"
+          53,LDIMM0724,homocysteine-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          56,LDBIO0944,magnesium-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          57,LDIMM1110,parathyroid-hormone-pth-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          58,LDSER1234,tyhidot-igm-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          59,LDHEM0948,malaria-antigen-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          60,LDBIO0058,alkaline-phosphatase-alp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          63,LDSER0185,anti-streptolysin-o-aso-quantitative-test,"LDIMM0159,LDSER1174"
+          65,LDIMM1025,nt-pro-bnp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          71,LDBIO0026,acid-phosphatase-total,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          73,LDHEM0602,glucose-6-phosphate-dehydrogenase-g6pd-quantitative,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          74,LDIMM0119,alpha-fetoprotein-afp-fluid,"LDIHC0818, LDIMM1237, LDIMM0872"
+          77,LDBIO0124,alpha-2-macroglobulin,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          78,LDHEM1058,peripheral-blood-smear-for-malarial-parasite-ps-for-mp,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          79,LDIMM0011,5-amino-levulinic-acid-5-ala-spot-urine-test,"LDBIO0408,LDBIO0044,LDBIO0405,LDBIO1104,LDBIO0410,LDBIO0258"
+          80,LDBIO0012,5-hydroxyindoleacetic-acid-5-hiaa-24-hours-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          81,LDIMM0029,acth-stimulation-test-for-cortisol-test,"LDIMM0039,LDBIO0052,LDELI0004"
+          82,LDSER1288,widal-slide-agglutination,"LDIMM1686, LDSER1234, LDCLI1171"
+          83,LDBIO1159,sodium,"LDHEM0378, LDBIO1295, LDBIO0497"
+          84,LDBIO0035,adenosine-deaminase-ada-test,"LDMIC0040"
+          87,LDIMM0039,adrenocorticotropic-hormone-acth,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          88,LDSER0171,anti-parietal-cell-antibody-ifa,"LDHEM0378, LDIMM1268, LDIMM1382, LDIMM0174"
+          89,LDMIC0040,afb-smear-acid-fast-bacilli,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          90,LDMIC0041,albert-stain,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          92,LDBIO0042,albumin-quantitative-24-hours-urine-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          93,LDBIO0044,albumin-serum,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          94,LDBIO0046,albumin-globulin-ratio-a-g-ratio,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          95,LDBIO0042,alcohol-ethanol-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          96,LDBIO0752,immunoglobulin-igm,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          97,LDSER0001,1-3-beta-d-glucan,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          99,LDIMM0537,first-trimester-triple-marker-with-plgf-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          102,LDBIO0125,alanine-amino-transferase-alt-sgpt,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          105,LDSER1781,aldehyde-chopra-test-for-kala-azar-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          106,LDBIO0050,aldosterone-serum,"LDBIO0498,LDBIO1085"
+          111,LDBIO0060,alkaptonuria-spot-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          112,LDSER1723,allergy-drug-panel,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          113,LDALL1332,allergy-screen-adults-5-years-phadiatop-adult,"LDHEM0257,LDBIO0256,LDBIO0255,LDBIO0253,LDMLD1591,LDHIS0685"
+          114,LDALL1471,allergy-alternaria-alternata,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          115,LDALL1477,beef-allergy-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          116,LDALL1485,allergy-cat-dander,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          117,LDALL1492,allergy-cockroach-american,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          118,LDALL1497,allergy-common-ragweed,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          119,LDSER0179,anti-smooth-muscle-antibody-asma-ifa,"LDSER0141, LDIMM1382, LDSER0162"
+          120,LDALL1517,allergy-dermatophagoides-farinae,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          121,LDALL1514,allergy-dermatophagoides-pteronyssinus,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          123,LDALL0073,allergy-egg-white,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          124,LDALL1504,allergy-elm,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          125,LDALL1556,allergy-eucalyptus-gum-tree,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          126,LDALL1506,allergy-fish-cod,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          127,LDALL0078,allergy-milk,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          129,LDALL0086,allergy-peanut,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          130,LDALL0093,allergy-pork,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          134,LDALL0094,allergy-potato,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          135,LDALL0097,allergy-rice,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          136,LDALL0103,allergy-soyabean,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          137,LDALL1542,allergy-timothy,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          142,LDALL0109,allergy-tomato,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          144,LDALL0112,allergy-wheat,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          146,LDBIO0127,aluminium-serum,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          149,LDBIO0130,amino-acids-quantitative-plasma,"LDBIO1648,LDBIO1209,LDBIO0044,LDBIO1100,LDIMM1732"
+          151,LDCYT0132,aml1-eto-t8-21aml-m2fish,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          153,LDBIO0133,ammonia,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          155,LDBIO0137,amylase-fluid,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          156,LDSER0145,anca-profile-elisa,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          157,LDIMM0146,androstenedione,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          158,LDBIO0147,angiotensin-converting-enzyme-ace,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          159,LDLKP1877,lupikavach-pre-operative,"LDDM1909"
+          175,LDLKP1864,lupikavach-health-screen-package-lily,"LDDM1909"
+          180,LDLKP3004,lupikavach-health-screen-package-dahlia,"LDDM1909"
+          182,LDCOA0191,antithrombin-iii-antigen,"LDIMM0724"
+          185,LDLKP3006,lupikavach-lavender-female,"LDDM1909"
+          190,LDLKP1866,lupikavach-healthy-women-package-rose,"LDDM1909"
+          195,LDLKP3005,lupikavach-aster-male,"LDBIO0402"
+          199,LDSER1287,widal-tube-agglutination,"LDMLD1591, LDMIC1327"
+          214,LDSER1265,vgkc-ab-voltage-gated-potassium-channel-antibody-csf,"LDSER0166"
+          239,LDMICRO2028,urine-culture-sensitivity,"LDBIO0903, LDMIC0612"
+          242,LDIMM1237,unconjugated-estriol-ue3,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          256,LDMOL1812,hpv-chlamydia-trachomatis-neisseria-gonorrhea-pcr-panel-qualitative,"LDMOL0729"
+          264,LDSER0151,anti-b-titres,"LDHEM0378,LDSER0150"
+          278,LDIMM0158,anti-diuretic-hormone-adh,"LDBIO1159,LDBIO1161,LDBIO1162"
+          279,LDIMM0159,anti-dnase-b-deoxyribonuclease-b,"LDBIO1159,LDBIO1161,LDBIO1162"
+          285,LDSER0166,anti-lkm-1-antibody-liver-kidney-microsomal-antibody-ifa,"LDSER0168,LDSER0141,LDSER0179,LDBIO0202,LDBIO0240,LDBIO1294"
+          364,LDSER0600,gliadin-antibodies-panel,"LDSER1196,LDSER1197"
+          382,LDCLI1149,semen-fructose-qualitative-test,"LDCLI1148"
+          385,LDSER1147,scrub-typhus-antibody-test,"LDBIO1283, LDHEM0378, LDIMM1314"
+          394,LDMOL1393,goodpastures-syndrome-panel,"LDBIO1295,LDSER0298,LDSER0189"
+          414,LDIMM1407,immunoglobulin-profile-serum-test,"LDHEM0378, LDBIO1295, LDBIO0402"
+          418,LDMIC0868,india-ink-preparation-csf-test,"LDCYT0416"
+          420,LDBIO0933,Lipoprotein-a-Test,"LDBIO0646,LDBIO1294"
+          421,LDBIO0869,infectious-mononucleosis-test-heterophilic-antibodies-monospot-test,"LDHEM0378"
+          423,LDBIO0934,lipoprotein-electrophoresis-test,"LDBIO1796,LDBIO0361,LDIMM0194"
+          424,LDMOL0620,influenza-panel-pcr-influenza-a-h1n1-h3n2-influenza-b-test,"LDHEM0378, LDHEM1565, LDBIO0402"
+          425,LDBIO0935,lithium-serum-test,"LDBIO1294,LDBIO1295,LDBIO0253,LDBIO0255,LDIMM1383"
+          426,LDIMM0872,inhibin-a-test,"LDIMM028"
+          428,LDIMM1646,Liver-cytosolic-antigen-type-1-lc-1-antibody-serum-test,"LDBIO1294,LDSER0179"
+          429,LDLKP1562,insulin-random-serum-test,"LDBIO0634, LDBIO0256, LDIMM0276"
+          431,LDIMM0875,Insulin-Antibody-Test,"LDIMM0276, LDIMM0277"
+          434,LDSER0939,lyme-borrelia-burgdorferi-igg-igm-antibodies-test,"LDHEM0378,LDHEM0504,LDBIO0202,LDSER1122"
+          435,LDIMM0877,insulin-like-growth-factor-1-igf-somatomedin-c-test,"LDBIO0634, LDBIO0256, LDIMM0276"
+          436,LDIMM0878,insulin-like-growth-factor-blinding-protein-3-igf-bp3-test,"LDBIO0634, LDBIO0256, LDIMM0276"
+          439,LDBIO0883,iron-studies-comprehensive-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          441,LDSER0952,measles-rubeola-virus-igg-antibody-test,"LDSER0953,LDSER0986,LDSER0987,LDSER1128,LDSER1129"
+          442,LDBIO0884,iron-24-hour-urine-test,"LDIMM1222, LDBIO1207, LDHEM0378, LDBIO1207"
+          443,LDSER0953,measles-rubeola-virus-igm-antibody-test,"LDSER0953,LDSER0986,LDSER0987,LDIMM0863"
+          444,LDBIO0885,Serum-Iron-Test,"LDIMM1222, LDBIO1207, LDHEM0378, LDBIO1207"
+          445,LDIMM1420,menopause-comprehensive-profile,"LDIMM0169,LDIMM1094"
+          446,LDIMM0886,islet-cell-antibody-test,"LDIMM0276"
+          447,LDHEM0378,rh-antibody-titre,"LDHEM1115"
+          448,LDMOL0895,karyotyping-test,"LDSER1200"
+          450,LDIMM0956,metanephrine-free-plasma-test,"LDBIO1295,LDHEM0626"
+          452,LDHIS1118,reticulin-stain-histopathology-test,"LDHIS0677,LDHIS1055"
+          456,LDMOL1412,leukemia-pannel-aml-by-fish-test,"LDHEM0378, LDBIO1294, LDBIO1295"
+          457,LDMOL1411,leukemia-panel-all-by-fish-test,"LDHEM0378, LDBIO1294, LDBIO1295"
+          459,LDIMM0960,methotrexate-level-serum-test,"LDHEM0378,LDBIO0408,LDBIO1294,LDBIO1295"
+          461,LDSER1126,rotavirus-antigen-detection-stool-test,"LDMIC1327, LDBIO1438"
+          462,LDLKP1872,lupikavach-health-screen-package-daisy,"LDDM1909"
+          463,LDBIO0966,microsatellite-instability-msi-by-pcr-test,"LDHEM0379,LDIMM0304"
+          465,LDSER1124,ribosome-antibodies-test,"LDIMM0152"
+          466,LDMIC0967,modified-ziehl-neelsen-zn-staining-for-nocardia-test,"LDHEM0379,LDIMM0304"
+          469,LDLKP1875,lupikavach-health-package-orchid,"LDDM1909"
+          470,LDMOL0486,ebv-dna-qualitative-pcr,"LDMOL0731, LDMOL0643"
+          473,LDMOL0487,ebv-dna-quantitative-viral-load-pcr,"LDHEM1044, LDHEM0378"
+          474,LDIMM1114,RBC-Folate-Test,"LDBIO1266, LDIMM1273, LDIMM1274, LDIMM1276, LDHEM0378"
+          515,LDLKP3005,lupiKavach-complete-thyroid-check,"LDIMM1195"
+          583,LDMLD1591,blood-culture-test,"LDHEM1044, LDHEM0378"
+  - name: 2026_02_18_pre_import
+    request:
+      url: "{{lupin_be}}/api/v2/import/item_item_rel"
+      method: GET
+      headers:
+        - name: Connection
+          value: keep-alive
+        - name: Content-Type
+          value: application/json
+        - name: Authorization
+          value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 18 Feb 2026 06:53:53 GMT
+        - name: Content-Type
+          value: text/csv; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Disposition
+          value: attachment; filename="blog-related-tests.csv"
+        - name: ETag
+          value: W/"3359-VoM4uOYsXLZSXWNOSG+X/4SUUvI"
+        - name: Set-Cookie
+          value: connect.sid=s%3ATOZCj5UXUdNVrJ0kkgm7JZxqq_AjiReu.RLjolfBg34tSIXeQU3OwS8DQZz3fJVp39pzlqnBms0w; Path=/; Expires=Thu, 19 Feb 2026 06:53:53 GMT; HttpOnly
+        - name: Vary
+          value: Accept-Encoding
+        - name: Content-Encoding
+          value: br
+      body:
+        type: text
+        data: |
+          item_id,item_code,item_alias,related_test_csv
+          1,LDHEM0378,complete-blood-count-cbc,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          3,LDHEM0626,hemogram-cbc-with-esr-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          4,LDMIC1328,culture-and-sensitivity-urine-vitex-test,"LDMIC0612"
+          5,LDBIO0904,renal-function-test,"LDBIO0258,LDBIO0497"
+          6,LDIMM0528,ferritin-test,"LDHEM1044, LDHEM0378"
+          7,LDBIO0882,iron-studies-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          9,LDIMM0874,Insulin-Fasting-Test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          11,LDIMM1186,testosterone-total-test,"LDIMM0569,LDIMM0938,LDIMM1153"
+          12,LDIMM1192,thyroid-profile-test,"LDIMM0291"
+          13,LDLKP1537,lupikavach-vitamin-check-jasmine,"LDIMM1360, LDIMM1361"
+          15,LDSER0657,hepatitis-b-surface-antigen-hbsag-rapid-method,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          16,LDIMM1314,dengue-fever-antibodies-igg-igm-elisa-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          17,LDSER1589,dengue-ns1-antigen-elisa-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          18,LDALL0064,allergy-aspergillus-fumigatus,"LDALL1345, LDHEM0378"
+          20,LDSER0464,dengue-ns1-antigen-rapid-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          21,LDSER0668,Hepatitis-C-Antibodies-HCV-Rapid-Test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          22,LDALL0065,allergy-bermuda-grass,"LDALL1345, LDHEM0378"
+          24,LDSER1122,rheumatoid-factor-ra-test,"LDSER0154,LDHEM0504,LDBIO0402"
+          25,LDIMM0292,calcium,"LDIMM1274, LDIMM1110, LDBIO1073, LDBIO0944, LDBIO0044"
+          26,LDSER0154,anti-ccp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          27,LDALL0066,allergy-candida-albicans,"LDALL1345, LDHEM0378"
+          28,LDIMM1268,vitamin-b12-test,"LDIMM1276,LDIMM0724"
+          29,LDSER0143,antinuclear-antibody-ana-ifa-in-dilutions-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          30,LDSER0141,antinuclear-antibody-ana-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          31,LDBIO0674,high-sensitivity-c-reactive-protein-hs-crp-test,"LDBIO0402,LDHEM0504,LDSER0143"
+          33,LDALL0068,allergy-chicken,"LDALL0078, LDALL0112, LDHEM0378, LDALL1345, LDALL1345"
+          35,LDBIO0360,cholesterol-total-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          37,LDBIO0929,lipase-lps-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          38,LDBIO0965,microalbumin-spot-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          40,LDBIO0402,c-reactive-protein-crp-test,"LDHEM0504,LDSER0143"
+          42,LDIMM1195,thyroid-stimulating-hormone-tsh-ultrasensitive-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          43,LDBIO1085,potassium,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          44,LDSER0188,Anti-TPO-Thyroid-Peroxidase-Antibody-Test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          46,LDSER1262,vdrl-rpr-serum,"LDHEM0378, LDSER0657, LDHEM0379"
+          48,LDIMM0879,insulin-post-prandial-pp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          49,LDBIO1073,phosphorous-serum,"LDIMM0292,LDIMM0296"
+          51,LDIMM0963,microalbumin-creatinine-ratio-spot-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          52,LDALL0072,allergy-dog-dander,"LDALL1345, LDHEM0378"
+          53,LDIMM0724,homocysteine-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          56,LDBIO0944,magnesium-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          57,LDIMM1110,parathyroid-hormone-pth-test,"LDBIO0881"
+          58,LDSER1234,tyhidot-igm-test,"LDHEM0378,LDSER1589,LDHEM0379,LDHEM0504"
+          59,LDHEM0948,malaria-antigen-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          60,LDBIO0058,alkaline-phosphatase-alp-test,"LDBIO0125,LDBIO0590"
+          63,LDSER0185,anti-streptolysin-o-aso-quantitative-test,"LDIMM0159,LDSER1174"
+          65,LDIMM1025,nt-pro-bnp-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          66,LDIMM0568,serum-folate-folic-acid-test,"LDIMM1276,LDHEM0378"
+          70,LDIMU0072,amh-gold-plus,"LDIMM0569,LDIMM0169"
+          71,LDBIO0026,acid-phosphatase-total,"LDIMM1097,LDIMM1096"
+          73,LDHEM0602,glucose-6-phosphate-dehydrogenase-g6pd-quantitative,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          74,LDIMM0119,alpha-fetoprotein-afp-fluid,"LDIHC0818, LDIMM1237, LDIMM0872"
+          77,LDBIO0124,alpha-2-macroglobulin,"LDHEM0378,LDBIO0046"
+          78,LDHEM1058,peripheral-blood-smear-for-malarial-parasite-ps-for-mp,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          79,LDIMM0011,5-amino-levulinic-acid-5-ala-spot-urine-test,"LDBIO0408,LDBIO0044,LDBIO0405,LDBIO1104,LDBIO0410,LDBIO0258"
+          80,LDBIO0012,5-hydroxyindoleacetic-acid-5-hiaa-24-hours-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          81,LDIMM0029,acth-stimulation-test-for-cortisol-test,"LDIMM0039,LDBIO0052,LDELI0004"
+          82,LDSER1288,widal-slide-agglutination,"LDIMM1686, LDSER1234, LDCLI1171"
+          83,LDBIO1159,sodium,"LDHEM0378,LDBIO1295,LDBIO0052,LDIMM0158"
+          84,LDBIO0035,adenosine-deaminase-ada-test,"LDMIC0040"
+          87,LDIMM0039,adrenocorticotropic-hormone-acth,"LDIMM0390,LDIMM0146"
+          88,LDSER0171,anti-parietal-cell-antibody-ifa,"LDHEM0378, LDIMM1268, LDIMM1382, LDIMM0174"
+          89,LDMIC0040,afb-smear-acid-fast-bacilli,"LDHEM0504,LDBIO0402,LDMOL1610"
+          90,LDMIC0041,albert-stain,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          92,LDBIO0042,albumin-quantitative-24-hours-urine-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          93,LDBIO0044,albumin-serum,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          94,LDBIO0046,albumin-globulin-ratio-a-g-ratio,"LDHEM0378,LDBIO0402,LDBIO1294,LDBIO0042,LDBIO0044,LDBIO0045"
+          95,LDBIO0048,alcohol-ethanol-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          96,LDBIO0752,immunoglobulin-igm,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          97,LDSER0001,1-3-beta-d-glucan,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          99,LDIMM0537,first-trimester-triple-marker-with-plgf-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          102,LDBIO0125,alanine-amino-transferase-alt-sgpt,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          105,LDSER1781,aldehyde-chopra-test-for-kala-azar-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          106,LDBIO0050,aldosterone-serum,"LDBIO0258"
+          111,LDBIO0060,alkaptonuria-spot-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          112,LDSER1723,allergy-drug-panel,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          113,LDALL1332,allergy-screen-adults-5-years-phadiatop-adult,"LDHEM0257,LDBIO0256,LDBIO0255,LDBIO0253,LDMLD1591,LDHIS0685"
+          114,LDALL1471,allergy-alternaria-alternata,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          115,LDALL1477,beef-allergy-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          116,LDALL1485,allergy-cat-dander,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          117,LDALL1492,allergy-cockroach-american,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          118,LDALL1497,allergy-common-ragweed,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          119,LDSER0179,anti-smooth-muscle-antibody-asma-ifa,"LDSER0141, LDIMM1382, LDSER0162"
+          120,LDALL1517,allergy-dermatophagoides-farinae,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          121,LDALL1514,allergy-dermatophagoides-pteronyssinus,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          123,LDALL0073,allergy-egg-white,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          124,LDALL1504,allergy-elm,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          125,LDALL1556,allergy-eucalyptus-gum-tree,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          126,LDALL1506,allergy-fish-cod,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          127,LDALL0078,allergy-milk,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          129,LDALL0086,allergy-peanut,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          130,LDALL0093,allergy-pork,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          134,LDALL0094,allergy-potato,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          135,LDALL0097,allergy-rice,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          136,LDALL0103,allergy-soyabean,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          137,LDALL1542,allergy-timothy,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          142,LDALL0109,allergy-tomato,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          144,LDALL0112,allergy-wheat,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          146,LDBIO0127,aluminium-serum,"LDHEM0378,LDBIO1796"
+          149,LDBIO0130,amino-acids-quantitative-plasma,"LDBIO1648,LDBIO1209,LDBIO0044,LDBIO1100,LDIMM1732"
+          151,LDCYT0132,aml1-eto-t8-21aml-m2fish,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          153,LDBIO0133,ammonia,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          155,LDBIO0137,amylase-fluid,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          156,LDSER0145,anca-profile-elisa,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          157,LDIMM0146,androstenedione,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          158,LDBIO0147,angiotensin-converting-enzyme-ace,"LDMIC0040,LDHEM0378,LDIMM0292"
+          159,LDLKP1877,lupikavach-pre-operative,"LDDM1909"
+          175,LDLKP1864,lupikavach-health-screen-package-lily,"LDDM1909"
+          180,LDLKP3004,lupikavach-health-screen-package-dahlia,"LDDM1909"
+          182,LDCOA0191,antithrombin-iii-antigen,"LDIMM0724"
+          185,LDLKP3006,lupikavach-lavender-female,"LDDM1909"
+          190,LDLKP1866,lupikavach-healthy-women-package-rose,"LDDM1909"
+          195,LDLKP3005,lupikavach-aster-male,"LDBIO0402"
+          199,LDSER1287,widal-tube-agglutination,"LDMLD1591, LDMIC1327"
+          213,LDIMM1273,vitamin-d-1-25-dihydroxy,"LDIMM1276,LDHEM0378"
+          214,LDSER1265,vgkc-ab-voltage-gated-potassium-channel-antibody-csf,"LDSER0166"
+          239,LDMICRO2028,urine-culture-sensitivity,"LDBIO0903, LDMIC0612"
+          242,LDIMM1237,unconjugated-estriol-ue3,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          250,LDSER1201,torch-10-profile,"LDSER0149"
+          256,LDMOL1812,hpv-chlamydia-trachomatis-neisseria-gonorrhea-pcr-panel-qualitative,"LDMOL0729"
+          264,LDSER0151,anti-b-titres,"LDHEM0378,LDSER0150"
+          278,LDIMM0158,anti-diuretic-hormone-adh,"LDBIO1159,LDBIO1161,LDBIO1162"
+          279,LDIMM0159,anti-dnase-b-deoxyribonuclease-b,"LDBIO1159,LDBIO1161,LDBIO1162"
+          285,LDSER0166,anti-lkm-1-antibody-liver-kidney-microsomal-antibody-ifa,"LDSER0168,LDSER0141,LDSER0179,LDBIO0202,LDBIO0240,LDBIO1294"
+          290,LDIMM1228,troponin-i-high-sensitive-hstnl-test,"LDBIO0403,LDBIO0674,LDIMM0274"
+          307,LDSER1768,hepatitis-a-virus-lgg-hav-lgg-serum-test,"LDSER0656,LDSER0642"
+          332,LDMOL0697,hiv-1-rna-quantitative-viral-load-pcr,"LDFLO0334,LDSER0656,LDSER1262"
+          338,LDSER0693,hiv-1-2-ab-p24-ag-combo-clia,"LDFLO0334,LDSER1262"
+          360,LDBIO1209,Serum-Total-Protein-Test,"LDBIO0044"
+          364,LDSER0600,gliadin-antibodies-panel,"LDSER1196,LDSER1197"
+          373,LDIMM1185,testosterone-test,"LDIMM0569,LDIMM0938,LDIMM1153"
+          382,LDCLI1149,semen-fructose-qualitative-test,"LDCLI1148"
+          384,LDBIO1794,selenium-serum-test,"LDBIO0902,LDBIO0345"
+          385,LDSER1147,scrub-typhus-antibody-test,"LDBIO1283, LDHEM0378, LDIMM1314"
+          394,LDMOL1393,goodpastures-syndrome-panel,"LDBIO1295,LDSER0298,LDSER0189"
+          414,LDIMM1407,immunoglobulin-profile-serum-test,"LDHEM0378, LDBIO1295, LDBIO0402"
+          418,LDMIC0868,india-ink-preparation-csf-test,"LDCYT0416,LDHEM1566,LDMIC0417,LDMIC0612"
+          420,LDBIO0933,Lipoprotein-a-Test,"LDBIO0646,LDBIO1294"
+          421,LDBIO0869,infectious-mononucleosis-test-heterophilic-antibodies-monospot-test,"LDHEM0378,LDHEM1057"
+          423,LDBIO0934,lipoprotein-electrophoresis-test,"LDBIO1796,LDBIO0361,LDIMM0194"
+          424,LDMOL0620,influenza-panel-pcr-influenza-a-h1n1-h3n2-influenza-b-test,"LDHEM0378, LDHEM1565, LDBIO0402"
+          425,LDBIO0935,lithium-serum-test,"LDBIO1294,LDBIO1295,LDBIO0253,LDBIO0255,LDIMM1383"
+          426,LDIMM0872,inhibin-a-test,"LDIMM028"
+          428,LDIMM1646,Liver-cytosolic-antigen-type-1-lc-1-antibody-serum-test,"LDBIO1294"
+          429,LDLKP1562,insulin-random-serum-test,"LDBIO0634, LDBIO0256, LDIMM0276"
+          431,LDIMM0875,Insulin-Antibody-Test,"LDIMM0276, LDIMM0277"
+          434,LDSER0939,lyme-borrelia-burgdorferi-igg-igm-antibodies-test,"LDHEM0378,LDHEM0504,LDBIO0202,LDSER1122"
+          435,LDIMM0877,insulin-like-growth-factor-1-igf-somatomedin-c-test,"LDBIO0634, LDBIO0256, LDIMM0276"
+          436,LDIMM0878,insulin-like-growth-factor-blinding-protein-3-igf-bp3-test,"LDIMM0615"
+          439,LDBIO0883,iron-studies-comprehensive-test,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          441,LDSER0952,measles-rubeola-virus-igg-antibody-test,"LDSER0953,LDSER0986,LDSER0987,LDSER1128,LDSER1129"
+          442,LDBIO0884,iron-24-hour-urine-test,"LDIMM1222, LDBIO1207, LDHEM0378, LDBIO1207"
+          443,LDSER0953,measles-rubeola-virus-igm-antibody-test,"LDSER0953,LDSER0986,LDSER0987,LDIMM0863"
+          444,LDBIO0885,Serum-Iron-Test,"LDIMM1222, LDBIO1207, LDHEM0378, LDBIO1207"
+          445,LDIMM1420,menopause-comprehensive-profile,"LDIMM0169,LDIMM1094"
+          446,LDIMM0886,islet-cell-antibody-test,"LDIMM0276"
+          447,LDSER1121,rh-antibody-titre,"LDHEM1115"
+          448,LDMOL0895,karyotyping-test,"LDSER1200"
+          450,LDIMM0956,metanephrine-free-plasma-test,"LDBIO1295,LDHEM0626"
+          452,LDHIS1118,reticulin-stain-histopathology-test,"LDHIS0677,LDHIS1055"
+          456,LDMOL1412,leukemia-pannel-aml-by-fish-test,"LDHEM0378, LDBIO1294, LDBIO1295"
+          457,LDMOL1411,leukemia-panel-all-by-fish-test,"LDHEM0378, LDBIO1294, LDBIO1295"
+          459,LDIMM0960,methotrexate-level-serum-test,"LDHEM0378,LDBIO0408,LDBIO1294,LDBIO1295"
+          462,LDLKP1872,lupikavach-health-screen-package-daisy,"LDDM1909"
+          463,LDBIO0966,microsatellite-instability-msi-by-pcr-test,"LDHEM0379,LDIMM0304"
+          465,LDSER1124,ribosome-antibodies-test,"LDIMM0152"
+          466,LDMIC0967,modified-ziehl-neelsen-zn-staining-for-nocardia-test,"LDHEM0379,LDIMM0304"
+          469,LDLKP1875,lupikavach-health-package-orchid,"LDDM1909"
+          470,LDMOL0486,ebv-dna-qualitative-pcr,"LDMOL0731, LDMOL0643"
+          473,LDMOL0487,ebv-dna-quantitative-viral-load-pcr,"LDHEM1044, LDHEM0378"
+          474,LDIMM1114,RBC-Folate-Test,"LDBIO1266, LDIMM1273, LDIMM1274, LDIMM1276, LDHEM0378"
+          515,LDLKP3005,lupiKavach-complete-thyroid-check,"LDIMM1195"
+          558,LDBIO1091,serum-procalcitonin-test,"LDBIO0402,LDHEM0378"
+          583,LDMLD1591,blood-culture-test,"LDHEM1044, LDHEM0378"
+  - name: 2026_02_18_post_import
+    request:
+      url: "{{lupin_be}}/api/v2/import/item_item_rel"
+      method: GET
+      headers:
+        - name: Connection
+          value: keep-alive
+        - name: Content-Type
+          value: application/json
+        - name: Authorization
+          value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 18 Feb 2026 06:55:38 GMT
+        - name: Content-Type
+          value: text/csv; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Disposition
+          value: attachment; filename="blog-related-tests.csv"
+        - name: ETag
+          value: W/"33b2-P02jJFr6yXunCsPmuIvbZap0YRg"
+        - name: Vary
+          value: Accept-Encoding
+        - name: Content-Encoding
+          value: br
+      body:
+        type: text
+        data: |
+          item_id,item_code,item_alias,related_test_csv
+          1,LDHEM0378,complete-blood-count-cbc,"LDHEM1115"
+          3,LDHEM0626,hemogram-cbc-with-esr-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          4,LDMIC1328,culture-and-sensitivity-urine-vitex-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          5,LDBIO0904,renal-function-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          6,LDIMM0528,ferritin-test,"LDHEM1044,LDHEM0378"
+          7,LDBIO0882,iron-studies-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          9,LDIMM0874,Insulin-Fasting-Test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          11,LDIMM1186,testosterone-total-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          12,LDIMM1192,thyroid-profile-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          13,LDLKP1537,lupikavach-vitamin-check-jasmine,"LDIMM1360,LDIMM1361"
+          15,LDSER0657,hepatitis-b-surface-antigen-hbsag-rapid-method,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          16,LDIMM1314,dengue-fever-antibodies-igg-igm-elisa-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          17,LDSER1589,dengue-ns1-antigen-elisa-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          18,LDALL0064,allergy-aspergillus-fumigatus,"LDALL1345,LDHEM0378"
+          20,LDSER0464,dengue-ns1-antigen-rapid-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          21,LDSER0668,Hepatitis-C-Antibodies-HCV-Rapid-Test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          22,LDALL0065,allergy-bermuda-grass,"LDALL1345,LDHEM0378"
+          24,LDSER1122,rheumatoid-factor-ra-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          25,LDIMM0292,calcium,"LDIMM1274,LDIMM1110,LDBIO1073,LDBIO0944,LDBIO0044"
+          26,LDSER0154,anti-ccp-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          27,LDALL0066,allergy-candida-albicans,"LDALL1345, LDHEM0378"
+          28,LDIMM1268,vitamin-b12-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          29,LDSER0143,antinuclear-antibody-ana-ifa-in-dilutions-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          30,LDSER0141,antinuclear-antibody-ana-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          31,LDBIO0674,high-sensitivity-c-reactive-protein-hs-crp-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          33,LDALL0068,allergy-chicken,"LDALL0078,LDALL0112,LDHEM0378,LDALL1345,LDALL1345"
+          35,LDBIO0360,cholesterol-total-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          37,LDBIO0929,lipase-lps-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          38,LDBIO0965,microalbumin-spot-urine,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          40,LDBIO0402,c-reactive-protein-crp-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          42,LDIMM1195,thyroid-stimulating-hormone-tsh-ultrasensitive-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          43,LDBIO1085,potassium,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          44,LDSER0188,Anti-TPO-Thyroid-Peroxidase-Antibody-Test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          46,LDSER1262,vdrl-rpr-serum,"LDHEM0378,LDSER0657,LDHEM0379"
+          48,LDIMM0879,insulin-post-prandial-pp-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          49,LDBIO1073,phosphorous-serum,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          51,LDIMM0963,microalbumin-creatinine-ratio-spot-urine,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          52,LDALL0072,allergy-dog-dander,"LDALL1345,LDHEM0378"
+          53,LDIMM0724,homocysteine-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          56,LDBIO0944,magnesium-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          57,LDIMM1110,parathyroid-hormone-pth-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          58,LDSER1234,tyhidot-igm-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          59,LDHEM0948,malaria-antigen-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          60,LDBIO0058,alkaline-phosphatase-alp-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          63,LDSER0185,anti-streptolysin-o-aso-quantitative-test,"LDIMM0159,LDSER1174"
+          65,LDIMM1025,nt-pro-bnp-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          66,LDIMM0568,serum-folate-folic-acid-test,"LDIMM1276,LDHEM0378"
+          70,LDIMU0072,amh-gold-plus,"LDIMM0569,LDIMM0169"
+          71,LDBIO0026,acid-phosphatase-total,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          73,LDHEM0602,glucose-6-phosphate-dehydrogenase-g6pd-quantitative,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          74,LDIMM0119,alpha-fetoprotein-afp-fluid,"LDIHC0818,LDIMM1237,LDIMM0872"
+          77,LDBIO0124,alpha-2-macroglobulin,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          78,LDHEM1058,peripheral-blood-smear-for-malarial-parasite-ps-for-mp,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          79,LDIMM0011,5-amino-levulinic-acid-5-ala-spot-urine-test,"LDBIO0408,LDBIO0044,LDBIO0405,LDBIO1104,LDBIO0410,LDBIO0258"
+          80,LDBIO0012,5-hydroxyindoleacetic-acid-5-hiaa-24-hours-urine,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          81,LDIMM0029,acth-stimulation-test-for-cortisol-test,"LDIMM0039,LDBIO0052,LDELI0004"
+          82,LDSER1288,widal-slide-agglutination,"LDIMM1686,LDSER1234,LDCLI1171"
+          83,LDBIO1159,sodium,"LDHEM0378,LDBIO1295,LDBIO0497"
+          84,LDBIO0035,adenosine-deaminase-ada-test,"LDMIC0040"
+          87,LDIMM0039,adrenocorticotropic-hormone-acth,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          88,LDSER0171,anti-parietal-cell-antibody-ifa,"LDHEM0378,LDIMM1268,LDIMM1382,LDIMM0174"
+          89,LDMIC0040,afb-smear-acid-fast-bacilli,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          90,LDMIC0041,albert-stain,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          92,LDBIO0042,albumin-quantitative-24-hours-urine-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          93,LDBIO0044,albumin-serum,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          94,LDBIO0046,albumin-globulin-ratio-a-g-ratio,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          95,LDBIO0048,alcohol-ethanol-urine,"LDCLI1027, LDHEM1115, LDCLI1278, LDHEM0257"
+          96,LDBIO0752,immunoglobulin-igm,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          97,LDSER0001,1-3-beta-d-glucan,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          99,LDIMM0537,first-trimester-triple-marker-with-plgf-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          102,LDBIO0125,alanine-amino-transferase-alt-sgpt,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          105,LDSER1781,aldehyde-chopra-test-for-kala-azar-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          106,LDBIO0050,aldosterone-serum,"LDBIO0498,LDBIO1085"
+          111,LDBIO0060,alkaptonuria-spot-urine,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          112,LDSER1723,allergy-drug-panel,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          113,LDALL1332,allergy-screen-adults-5-years-phadiatop-adult,"LDHEM0257,LDBIO0256,LDBIO0255,LDBIO0253,LDMLD1591,LDHIS0685"
+          114,LDALL1471,allergy-alternaria-alternata,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          115,LDALL1477,beef-allergy-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          116,LDALL1485,allergy-cat-dander,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          117,LDALL1492,allergy-cockroach-american,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          118,LDALL1497,allergy-common-ragweed,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          119,LDSER0179,anti-smooth-muscle-antibody-asma-ifa,"LDSER0141,LDIMM1382,LDSER0162"
+          120,LDALL1517,allergy-dermatophagoides-farinae,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          121,LDALL1514,allergy-dermatophagoides-pteronyssinus,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          123,LDALL0073,allergy-egg-white,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          124,LDALL1504,allergy-elm,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          125,LDALL1556,allergy-eucalyptus-gum-tree,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          126,LDALL1506,allergy-fish-cod,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          127,LDALL0078,allergy-milk,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          129,LDALL0086,allergy-peanut,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          130,LDALL0093,allergy-pork,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          134,LDALL0094,allergy-potato,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          135,LDALL0097,allergy-rice,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          136,LDALL0103,allergy-soyabean,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          137,LDALL1542,allergy-timothy,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          142,LDALL0109,allergy-tomato,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          144,LDALL0112,allergy-wheat,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          146,LDBIO0127,aluminium-serum,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          149,LDBIO0130,amino-acids-quantitative-plasma,"LDBIO1648,LDBIO1209,LDBIO0044,LDBIO1100,LDIMM1732"
+          151,LDCYT0132,aml1-eto-t8-21aml-m2fish,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          153,LDBIO0133,ammonia,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          155,LDBIO0137,amylase-fluid,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          156,LDSER0145,anca-profile-elisa,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          157,LDIMM0146,androstenedione,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          158,LDBIO0147,angiotensin-converting-enzyme-ace,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          159,LDLKP1877,lupikavach-pre-operative,"LDDM1909"
+          175,LDLKP1864,lupikavach-health-screen-package-lily,"LDDM1909"
+          180,LDLKP3004,lupikavach-health-screen-package-dahlia,"LDDM1909"
+          182,LDCOA0191,antithrombin-iii-antigen,"LDIMM0724"
+          185,LDLKP3006,lupikavach-lavender-female,"LDDM1909"
+          190,LDLKP1866,lupikavach-healthy-women-package-rose,"LDDM1909"
+          195,LDLKP3005,lupikavach-aster-male,"LDIMM1195"
+          199,LDSER1287,widal-tube-agglutination,"LDMLD1591,LDMIC1327"
+          213,LDIMM1273,vitamin-d-1-25-dihydroxy,"LDIMM1276,LDHEM0378"
+          214,LDSER1265,vgkc-ab-voltage-gated-potassium-channel-antibody-csf,"LDSER0166"
+          239,LDMICRO2028,urine-culture-sensitivity,"LDBIO0903,LDMIC0612"
+          242,LDIMM1237,unconjugated-estriol-ue3,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          250,LDSER1201,torch-10-profile,"LDSER0149"
+          256,LDMOL1812,hpv-chlamydia-trachomatis-neisseria-gonorrhea-pcr-panel-qualitative,"LDMOL0729"
+          264,LDSER0151,anti-b-titres,"LDHEM0378,LDSER0150"
+          278,LDIMM0158,anti-diuretic-hormone-adh,"LDBIO1159,LDBIO1161,LDBIO1162"
+          279,LDIMM0159,anti-dnase-b-deoxyribonuclease-b,"LDBIO1159,LDBIO1161,LDBIO1162"
+          285,LDSER0166,anti-lkm-1-antibody-liver-kidney-microsomal-antibody-ifa,"LDSER0168,LDSER0141,LDSER0179,LDBIO0202,LDBIO0240,LDBIO1294"
+          290,LDIMM1228,troponin-i-high-sensitive-hstnl-test,"LDBIO0403,LDBIO0674,LDIMM0274"
+          307,LDSER1768,hepatitis-a-virus-lgg-hav-lgg-serum-test,"LDSER0656,LDSER0642"
+          332,LDMOL0697,hiv-1-rna-quantitative-viral-load-pcr,"LDFLO0334,LDSER0656,LDSER1262"
+          338,LDSER0693,hiv-1-2-ab-p24-ag-combo-clia,"LDFLO0334,LDSER1262"
+          360,LDBIO1209,Serum-Total-Protein-Test,"LDBIO0044"
+          364,LDSER0600,gliadin-antibodies-panel,"LDSER1196,LDSER1197"
+          373,LDIMM1185,testosterone-test,"LDIMM0569,LDIMM0938,LDIMM1153"
+          382,LDCLI1149,semen-fructose-qualitative-test,"LDCLI1148"
+          384,LDBIO1794,selenium-serum-test,"LDBIO0902,LDBIO0345"
+          385,LDSER1147,scrub-typhus-antibody-test,"LDBIO1283,LDHEM0378,LDIMM1314"
+          394,LDMOL1393,goodpastures-syndrome-panel,"LDBIO1295,LDSER0298,LDSER0189"
+          414,LDIMM1407,immunoglobulin-profile-serum-test,"LDHEM0378,LDBIO1295,LDBIO0402"
+          418,LDMIC0868,india-ink-preparation-csf-test,"LDCYT0416"
+          420,LDBIO0933,Lipoprotein-a-Test,"LDBIO0646,LDBIO1294"
+          421,LDBIO0869,infectious-mononucleosis-test-heterophilic-antibodies-monospot-test,"LDHEM0378"
+          423,LDBIO0934,lipoprotein-electrophoresis-test,"LDBIO1796,LDBIO0361,LDIMM0194"
+          424,LDMOL0620,influenza-panel-pcr-influenza-a-h1n1-h3n2-influenza-b-test,"LDHEM0378,LDHEM1565,LDBIO0402"
+          425,LDBIO0935,lithium-serum-test,"LDBIO1294,LDBIO1295,LDBIO0253,LDBIO0255,LDIMM1383"
+          426,LDIMM0872,inhibin-a-test,"LDIMM028"
+          428,LDIMM1646,Liver-cytosolic-antigen-type-1-lc-1-antibody-serum-test,"LDBIO1294,LDSER0179"
+          429,LDLKP1562,insulin-random-serum-test,"LDBIO0634,LDBIO0256,LDIMM0276"
+          431,LDIMM0875,Insulin-Antibody-Test,"LDIMM0276,LDIMM0277"
+          434,LDSER0939,lyme-borrelia-burgdorferi-igg-igm-antibodies-test,"LDHEM0378,LDHEM0504,LDBIO0202,LDSER1122"
+          435,LDIMM0877,insulin-like-growth-factor-1-igf-somatomedin-c-test,"LDBIO0634,LDBIO0256,LDIMM0276"
+          436,LDIMM0878,insulin-like-growth-factor-blinding-protein-3-igf-bp3-test,"LDBIO0634,LDBIO0256,LDIMM0276"
+          439,LDBIO0883,iron-studies-comprehensive-test,"LDCLI1027,LDHEM1115,LDCLI1278,LDHEM0257"
+          441,LDSER0952,measles-rubeola-virus-igg-antibody-test,"LDSER0953,LDSER0986,LDSER0987,LDSER1128,LDSER1129"
+          442,LDBIO0884,iron-24-hour-urine-test,"LDIMM1222,LDBIO1207,LDHEM0378,LDBIO1207"
+          443,LDSER0953,measles-rubeola-virus-igm-antibody-test,"LDSER0953,LDSER0986,LDSER0987,LDIMM0863"
+          444,LDBIO0885,Serum-Iron-Test,"LDIMM1222,LDBIO1207,LDHEM0378,LDBIO1207"
+          445,LDIMM1420,menopause-comprehensive-profile,"LDIMM0169,LDIMM1094"
+          446,LDIMM0886,islet-cell-antibody-test,"LDIMM0276"
+          447,LDSER1121,rh-antibody-titre,"LDHEM1115"
+          448,LDMOL0895,karyotyping-test,"LDSER1200"
+          450,LDIMM0956,metanephrine-free-plasma-test,"LDBIO1295,LDHEM0626"
+          452,LDHIS1118,reticulin-stain-histopathology-test,"LDHIS0677,LDHIS1055"
+          456,LDMOL1412,leukemia-pannel-aml-by-fish-test,"LDHEM0378,LDBIO1294,LDBIO1295"
+          457,LDMOL1411,leukemia-panel-all-by-fish-test,"LDHEM0378,LDBIO1294,LDBIO1295"
+          459,LDIMM0960,methotrexate-level-serum-test,"LDHEM0378,LDBIO0408,LDBIO1294,LDBIO1295"
+          461,LDSER1126,rotavirus-antigen-detection-stool-test,"LDMIC1327,LDBIO1438"
+          462,LDLKP1872,lupikavach-health-screen-package-daisy,"LDDM1909"
+          463,LDBIO0966,microsatellite-instability-msi-by-pcr-test,"LDHEM0379,LDIMM0304"
+          465,LDSER1124,ribosome-antibodies-test,"LDIMM0152"
+          466,LDMIC0967,modified-ziehl-neelsen-zn-staining-for-nocardia-test,"LDHEM0379,LDIMM0304"
+          469,LDLKP1875,lupikavach-health-package-orchid,"LDDM1909"
+          470,LDMOL0486,ebv-dna-qualitative-pcr,"LDMOL0731,LDMOL0643"
+          473,LDMOL0487,ebv-dna-quantitative-viral-load-pcr,"LDHEM1044,LDHEM0378"
+          474,LDIMM1114,RBC-Folate-Test,"LDBIO1266,LDIMM1273,LDIMM1274,LDIMM1276,LDHEM0378"
+          515,LDLKP3005,lupiKavach-complete-thyroid-check,"LDIMM1195"
+          558,LDBIO1091,serum-procalcitonin-test,"LDBIO0402,LDHEM0378"
+          583,LDMLD1591,blood-culture-test,"LDHEM1044,LDHEM0378"

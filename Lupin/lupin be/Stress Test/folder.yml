@@ -1,0 +1,7 @@
+info:
+  name: Stress Test
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit

@@ -1,0 +1,25 @@
+info:
+  name: Resend OTP
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/refer_friend/resend_otp"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "mobile": "8506056814",
+          "request_id": "683D7189D9B046AAB38DBC8F2BFDC4AF"
+        }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,18 @@
+info:
+  name: State-City-Tag-Lab
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://lims.lupindiagnostics.com/HomeCollectionAPI/api/HomeAPI/GettTagLab
+  headers:
+    - name: Authorization
+      value: Bearer ew0KICAiYWxnIjogImh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI2htYWMtc2hhMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAic3ViIjogImhjX3dlYnNpdGUiLA0KICAidW5pcXVlX25hbWUiOiAiV2Vic2l0ZSIsDQogICJqdGkiOiAiNDJmYjM0N2ItNTYzZi00NjgwLTk0YmUtMWZjNGEwNmJjZWIyIiwNCiAgImlhdCI6ICIyLzIvMjAyNiAxMjowMjoxMiBQTSIsDQogICJuYmYiOiAxNzcwMDEzOTMyLA0KICAiZXhwIjogMTc3MDAyODMzMiwNCiAgImlzcyI6ICJUZXN0LmNvbSIsDQogICJhdWQiOiAiVGVzdC5jb20iDQp9.zR5AweFO7n-HvSs585tf7cpHcFJEq9CyM1cWVGuryBU
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

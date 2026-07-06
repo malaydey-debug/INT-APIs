@@ -1,0 +1,28 @@
+info:
+  name: GetDropLocation
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/api/HomeAPI/GetDropLocationNew
+  headers:
+    - name: Authorization
+      value: Bearer {{lims-token}}
+  body:
+    type: multipart-form
+    data:
+      - name: CityID
+        type: text
+        value: "277"
+        disabled: true
+      - name: CenterType
+        type: text
+        value: COCO
+        disabled: true
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,460 @@
+info:
+  name: Blog_Item_Rel_Import
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/import/blog_item_rel"
+  headers:
+    - name: Connection
+      value: keep-alive
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+  body:
+    type: multipart-form
+    data:
+      - name: client
+        type: text
+        value: import_handle
+      - name: csv_file
+        type: file
+        value:
+          - /D:/DEV/lupin/importer/in/blog_item_rel.csv
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: "20260211233330"
+    request:
+      url: "{{lupin_be}}/api/v2/import/blog_item_rel"
+      method: POST
+      headers:
+        - name: Connection
+          value: keep-alive
+        - name: Content-Type
+          value: application/json
+        - name: Authorization
+          value: Bearer 6e723bee-bdc9-492d-9072-874decb5cd06
+      body:
+        type: multipart-form
+        data:
+          - name: client
+            type: text
+            value: import_handle
+          - name: csv_file
+            type: file
+            value:
+              - /D:/DEV/lupin/importer/in/blog_item_rel.csv
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 11 Feb 2026 18:03:09 GMT
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Connection
+          value: keep-alive
+        - name: Server
+          value: nginx/1.24.0 (Ubuntu)
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Cross-Origin-Opener-Policy
+          value: same-origin
+        - name: Cross-Origin-Resource-Policy
+          value: same-origin
+        - name: Origin-Agent-Cluster
+          value: ?1
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: ETag
+          value: W/"e16-odeYJnJuoqmXehM+oky8zN1Bwbc"
+        - name: Set-Cookie
+          value: connect.sid=s%3A5QUskmJ3udbS4yr6VQTWJQlEcRc96HxO.4ms%2FtuGe%2Fl1Qlrglw%2BaUcy%2BqAt0Vf2LLG%2FFzw20DUbQ; Path=/; Expires=Thu, 12 Feb 2026 18:03:09 GMT; HttpOnly
+        - name: Vary
+          value: Accept-Encoding
+        - name: Content-Encoding
+          value: br
+      body:
+        type: json
+        data: |-
+          {
+              "status": true,
+              "message": "imported blogs to item relation and removed old relations",
+              "previous_state": [
+                  {
+                      "id": 6,
+                      "test_page_v_2_id": 3,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 9,
+                      "test_page_v_2_id": 6,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 12,
+                      "test_page_v_2_id": 9,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 13,
+                      "test_page_v_2_id": 10,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 14,
+                      "test_page_v_2_id": 11,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 15,
+                      "test_page_v_2_id": 12,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 16,
+                      "test_page_v_2_id": 13,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 20,
+                      "test_page_v_2_id": 17,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 21,
+                      "test_page_v_2_id": 18,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 23,
+                      "test_page_v_2_id": 20,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 27,
+                      "test_page_v_2_id": 24,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 28,
+                      "test_page_v_2_id": 25,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 29,
+                      "test_page_v_2_id": 26,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 31,
+                      "test_page_v_2_id": 28,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 32,
+                      "test_page_v_2_id": 29,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 33,
+                      "test_page_v_2_id": 30,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 34,
+                      "test_page_v_2_id": 31,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 36,
+                      "test_page_v_2_id": 33,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 37,
+                      "test_page_v_2_id": 34,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 40,
+                      "test_page_v_2_id": 37,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 41,
+                      "test_page_v_2_id": 38,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 42,
+                      "test_page_v_2_id": 39,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 43,
+                      "test_page_v_2_id": 40,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 44,
+                      "test_page_v_2_id": 41,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 45,
+                      "test_page_v_2_id": 42,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 46,
+                      "test_page_v_2_id": 43,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 47,
+                      "test_page_v_2_id": 44,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 51,
+                      "test_page_v_2_id": 48,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 55,
+                      "test_page_v_2_id": 52,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 56,
+                      "test_page_v_2_id": 53,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 58,
+                      "test_page_v_2_id": 55,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 59,
+                      "test_page_v_2_id": 56,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 62,
+                      "test_page_v_2_id": 59,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 63,
+                      "test_page_v_2_id": 60,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 64,
+                      "test_page_v_2_id": 62,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 67,
+                      "test_page_v_2_id": 65,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 68,
+                      "test_page_v_2_id": 66,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 70,
+                      "test_page_v_2_id": 68,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 73,
+                      "test_page_v_2_id": 73,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 77,
+                      "test_page_v_2_id": 78,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 88,
+                      "test_page_v_2_id": 89,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 92,
+                      "test_page_v_2_id": 93,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 95,
+                      "test_page_v_2_id": 96,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 98,
+                      "test_page_v_2_id": 99,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 99,
+                      "test_page_v_2_id": 102,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 106,
+                      "test_page_v_2_id": 113,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 109,
+                      "test_page_v_2_id": 116,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 112,
+                      "test_page_v_2_id": 120,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 113,
+                      "test_page_v_2_id": 121,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 121,
+                      "test_page_v_2_id": 132,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 127,
+                      "test_page_v_2_id": 138,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 133,
+                      "test_page_v_2_id": 146,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 140,
+                      "test_page_v_2_id": 156,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 142,
+                      "test_page_v_2_id": 158,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 158,
+                      "test_page_v_2_id": 192,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 270,
+                      "test_page_v_2_id": 583,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 271,
+                      "test_page_v_2_id": 596,
+                      "post_id": 72,
+                      "post_order": 1
+                  },
+                  {
+                      "id": 273,
+                      "test_page_v_2_id": 598,
+                      "post_id": 72,
+                      "post_order": 1
+                  }
+              ]
+          }

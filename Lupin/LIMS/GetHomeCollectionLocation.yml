@@ -1,0 +1,18 @@
+info:
+  name: GetHomeCollectionLocation
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/api/HomeAPI/GetHomeCollectionLocation
+  headers:
+    - name: Authorization
+      value: Bearer {{lims-token}}
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

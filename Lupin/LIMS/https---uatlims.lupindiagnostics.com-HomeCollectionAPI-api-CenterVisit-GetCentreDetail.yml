@@ -1,0 +1,24 @@
+info:
+  name: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/api/CenterVisit/GetCentreDetail
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: https://uatlims.lupindiagnostics.com/HomeCollectionAPI/api/CenterVisit/GetCentreDetail
+  headers:
+    - name: Authorization
+      value: Bearer {{lims-token}}
+  body:
+    type: multipart-form
+    data:
+      - name: Client
+        type: text
+        value: Website
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,18 @@
+info:
+  name: GetSlotList
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: http://20.193.244.108/HomeCollectionAPI/api/HomeAPI/GetSlotList
+  headers:
+    - name: Authorization
+      value: bearer ew0KICAiYWxnIjogImh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI2htYWMtc2hhMjU2IiwNCiAgInR5cCI6ICJKV1QiDQp9.ew0KICAic3ViIjogImhjX3dlYnNpdGUiLA0KICAidW5pcXVlX25hbWUiOiAiV2Vic2l0ZSIsDQogICJqdGkiOiAiZDIxMmYzNDMtNTcyZi00MTNkLTlhMWEtOWM5YWQzYTRjYWVjIiwNCiAgImlhdCI6ICIxMi8yMC8yMDIxIDI6NTU6MzggUE0iLA0KICAibmJmIjogMTYzOTk5MjMzOCwNCiAgImV4cCI6IDE2NDAwMDY3MzgsDQogICJpc3MiOiAiVGVzdC5jb20iLA0KICAiYXVkIjogIlRlc3QuY29tIg0KfQ.xdlxInhkEfiQZc2G6esME2Df47ww2KsTzoZK6ndAoco
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: Lupiplus Check Client Existence
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{lupin_be}}/api/v2/lupiplus/check-client-existence"
+  headers:
+    - name: UserName
+      value: LupiPlusUAT
+      disabled: true
+    - name: password
+      value: LupIPlus@#26!05$&UAT
+      disabled: true
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "ClientID": "469E62172566D190E989F2F5745022E4"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
