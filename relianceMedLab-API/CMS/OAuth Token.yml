@@ -1,0 +1,29 @@
+info:
+  name: OAuth Token
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{cms_url}}/oauth/token"
+  headers:
+    - name: Content-Type
+      value: application/x-www-form-urlencoded
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: form-urlencoded
+    data:
+      - name: grant_type
+        value: client_credentials
+      - name: client_id
+        value: "{{client_id}}"
+      - name: client_secret
+        value: "{{client_secret}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

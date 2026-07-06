@@ -1,0 +1,26 @@
+info:
+  name: Basic Page Details
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{cms_url}}/api/en/basic-page-details"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{access_token}}
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"G99DwebworSQOnjBCNDkbELOobhkgNb1ku/h+rzOjSI=\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
