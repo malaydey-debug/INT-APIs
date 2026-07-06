@@ -1,0 +1,28 @@
+info:
+  name: Basic Page details
+  type: http
+  seq: 22
+
+http:
+  method: POST
+  url: http://localhost:8000/api/basic-page-details
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: iEYmC8dgb2sEfyYii5O3Ms-2zxXl9zCGG3XgmKSb6OI
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"JQ6FvvrsUMUewlEf5/x7PSPeXkVcZiLH2haetyS6lSs=\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

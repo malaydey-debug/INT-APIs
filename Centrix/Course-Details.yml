@@ -1,0 +1,29 @@
+info:
+  name: Course-Details
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: http://localhost:8000/api/course-details
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: WBlewq1UebIcBUePi72RGHagxPFVd02JSWdL1mLn3P8
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\": \"YfFPOZ+XIvwI4BlSmmA3MhaxBQJvyMcVE5eruu/FGNr9F2XcZRzmAmkuODEsrACD\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

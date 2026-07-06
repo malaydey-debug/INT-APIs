@@ -1,0 +1,44 @@
+info:
+  name: User / My Course Listing
+  type: http
+  seq: 18
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/user/course/listing
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: NaAg5zJaBAoKOi02vKRmwdG7twVGX_Sl3O16IdD2yVY
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"\"\r
+
+      \r
+
+      \r
+
+      //     {\r
+
+      //     \"search\": \"Academia Course\",\r
+
+      //     \"speciality\": \"33\",\r
+
+      //     \"sub_speciality\": \"298,299\",\r
+
+      //     \"progress\": \"1040\"\r
+
+      // }\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

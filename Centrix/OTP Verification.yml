@@ -1,0 +1,29 @@
+info:
+  name: OTP Verification
+  type: http
+  seq: 27
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/otp-verification
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: cA-a6SKmkmSZo44mlnIrr8ZKFVUEwctOYkhPNRpN_QA
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"gmWk2EE2yCJXTTLipvbNctKJbk/UNEtyjOBWf6nu/ClE0I9AQXOkWnBnWXxNOXkHXeVNRCckwngUuvZuyucaqUAKPxMnjF68XMbqRT6lFMxL5b2Gwq6E6mc6Y7InceP/JzrVxGiNySqFafeYJ+CwtzmGpZ/elo0kRLAXDbEzrL4=\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

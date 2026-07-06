@@ -1,0 +1,20 @@
+info:
+  name: Jwt token genaration
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: http://localhost/centrix/web/api/token
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "\r\n"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

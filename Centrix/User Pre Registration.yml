@@ -1,0 +1,27 @@
+info:
+  name: User Pre Registration
+  type: http
+  seq: 34
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/user-pre-registration
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"AKt4mbk+rx3/VwesKNAIUicglXJcbf3KzCZIJJQhOx9u0OWNvX6hqRm+AaA8hm21EmcydWfwrWVL0aRcuszXJ91vxswu737hWmwMqT+uy6wU8Qss3b3XXPcJUc2DmFacPLs0ao0g9GtaHri/fQ53miKiJmWrXwrYW7P/xRzDVO57wd1UBw896C84VJPhshVnX+XoF+D2OtLTZlyLEO840fx6Nx/2Rr3zqVZ0HRxa54w1s/33g2deKykWjxXjfohJVdLE2QA0RgpdlRd50lqES8GLullmN3CA/lg+LlkAWXDJ0GudEs/Pmnb+inkg3ja6uzjrNd7CRHNizsdnT8i7GqFyNCaFXOH7q4A1r5dCq4X1QJJznClhaeAezMqV3WNBL8Nnq/d142QlKABS52guJw==\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

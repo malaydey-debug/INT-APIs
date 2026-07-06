@@ -1,0 +1,49 @@
+info:
+  name: User Profile
+  type: http
+  seq: 29
+
+http:
+  method: POST
+  url: http://localhost:8000/api/user/profile
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: XLbeaUeSXb5kKKlP7klCFW_26tRbzIaPQGOJ0u3RA_M
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\": \"\"\r
+
+      }\r
+
+      \r
+
+      // {\r
+
+      //     \"first_name\": \"Test\",\r
+
+      //     \"last_name\": \"Test Dey\",\r
+
+      //     \"certificate_display_name\": \"hello Test Dey\",\r
+
+      //     \"gender\": \"10\",\r
+
+      //     \"profession\": \"26\",\r
+
+      //     \"speciality\": \"33\",\r
+
+      //     \"qualification\": \"12\"\r
+
+      // }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

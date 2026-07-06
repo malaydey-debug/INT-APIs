@@ -1,0 +1,29 @@
+info:
+  name: Sent OTP
+  type: http
+  seq: 26
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/sent-otp
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: cA-a6SKmkmSZo44mlnIrr8ZKFVUEwctOYkhPNRpN_QA
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"Jn2idr4QphzxHMtWx6yMlDQXC4n8qzmqj7ZgNUwwmtU3u4zJcvR0QD47fNZWivczra+mSXtHtmf3kQuo+UgfnmGWN73gTGkKOvjnxzCo30t+jIK5H/53ZWaP7sDm1FJbBcS2IAjc2mbktsLvESFwT72ZJ5pXctMPsHXEmBfu1YA=\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

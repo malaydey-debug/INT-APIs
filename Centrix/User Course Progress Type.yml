@@ -1,0 +1,32 @@
+info:
+  name: User Course Progress Type
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: http://localhost:8000/api/user/course/progress/type
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: 05NrWR9oZz4RC2YDgRGKKy5OhEsmMlP_HHb8H88OHec
+  body:
+    type: json
+    data: "{\r
+
+      \    // \"data\" : \"XiNPeg4D94NWvm3ThxDiuB59Dp7NWuXHp+Q20MtIIkM=\"\r
+
+      \    \"data\" : \"qg9d0MMJ+D+KMw3SL4o28AIQSkc3lB9d3QtopRpUfx0=\"\r
+
+      \    // \"data\" : \"PWyEIKkk4ephGOc6JFlKMtKchbh21hj59wl70d5zXvc=\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

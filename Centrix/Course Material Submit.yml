@@ -1,0 +1,110 @@
+info:
+  name: Course Material Submit
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/course/material-submit
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: b_DRh4wHo6dv1mprVyY8BT1W-5jy5qY35h1yxXb_TdU
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"M8j98bB14Dg87zcvAKK6h7tI+JSLaCiqnqfTRRu//JPNexFwJQHEAxxj9ZYIy8qtAqLGoQd+ljtOnf0fISxOQX+PY136Bb53vOckZjUddGpegbymsoL6J+SR1udUD2i7HqEwI/qgInoR7nP204PClpwokpZNIcphW+8wpoB6l78OWBpzNjNKcOT9HC21bW38Z+L0qVdCsL36Jk7XCVuNZfi/90R7f6zQvKjC+5glV0aJqwAAbU6WtR9BBxl1VKp8J/fkT7NxJekhZLh09PKyzwoyFQMAGO3bA+vrwX1Cextmw8UQT6aa8bayhSkNyXa9Qd2q9vN+73nFsfkNweWyqUQMtrkneTEpvQFGMIabEfFo0UBf9S/atfNWPVAK5C9tTqvI8WlFYKq0zrK0JtdbpL0oneGfybc6Ixoho/vTME16qasED4JKjZz0Yz7WWog2waYtNmZ7bqQ5qK7UOLydMOZWyC2fFODNLPvTlld0JEyyAXEvOKsLbOjJNZZgO+7ebU6MRZZsrLJ3K8V39OJM+A==\"\r
+
+      }\r
+
+      \r
+
+      // {\r
+
+      //     \"course_id\": 51,\r
+
+      //     \"module_id\": 65,\r
+
+      //     \"material_id\": 68, //lesson id or assesment id\r
+
+      //     \"view_time\": \"00:55:12\", //hh:mm:ss use for video\r
+
+      //     \"assessment\": {\r
+
+      //         \"time_taken\": \"00:25:00\", //hh:mm:ss        \r
+
+      //         \"ques_set\": [\r
+
+      //             {\r
+
+      //                 \"question_paragraph_id\": 377,\r
+
+      //                 \"ques\": {\r
+
+      //                     \"id\": 35,\r
+
+      //                     \"label\": \"what is my employer name\"\r
+
+      //                 },\r
+
+      //                 \"ans\": []\r
+
+      //             },\r
+
+      //             {\r
+
+      //                 \"question_paragraph_id\": 378,\r
+
+      //                 \"ques\": {\r
+
+      //                     \"id\": 34,\r
+
+      //                     \"label\": \"what is my hobby ..?\"\r
+
+      //                 },\r
+
+      //                 \"ans\": [\r
+
+      //                     {\r
+
+      //                         \"id\": 371,\r
+
+      //                         \"label\": \"cricket\"\r
+
+      //                     },\r
+
+      //                     {\r
+
+      //                         \"id\": 372,\r
+
+      //                         \"label\": \"badminton\"\r
+
+      //                     },\r
+
+      //                     {\r
+
+      //                         \"id\": 373,\r
+
+      //                         \"label\": \"Volleyball\"\r
+
+      //                     }\r
+
+      //                 ]\r
+
+      //             }\r
+
+      //         ]\r
+
+      //     }\r
+
+      // }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

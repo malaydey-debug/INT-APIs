@@ -1,0 +1,29 @@
+info:
+  name: Event-Details
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: http://localhost:8000/api/event-details
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: 2UviRdGGJ7SFwIkWVUzjLo1QR3_ZJ2Wb9mGBdJJcA4s
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\": \"P2IzNdjAwpiIKhRSA9Ykr1coF7Us4751iuI5LS4XkOAq91D8dIUl2T5KhgFzQ8Ul\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

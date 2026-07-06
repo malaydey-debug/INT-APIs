@@ -1,0 +1,48 @@
+info:
+  name: User Device Info
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/user-device-info
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: yn02GLV_lew5Xbgxv7vNRyevtXwf604Q6MZ5ht83oMo
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"E+p3cBwZLhehLb4Q8yc+OR1EDtyz2NJn8yo8AWFbx2Pcp6ip5RSt9ARNTzzhZ2cygEbaHJjmLzZJ4oIdp0CFI2lv23hu6QeIakGAISh0ac87jO0T3rRlvf13HHAN4d1rM5Y6ouFCGlljP5/OQ9eK7hCy9HCcUVFYWacBbLHaY3N1jkK87CvZPAStWuvw7/Md5II6yJOwhc0dRsZznoU+/JrY9irJleMmtnmr3hCASoo=\"\r
+
+      }\r
+
+      \r
+
+      // {\r
+
+      //     \"device_type\": \"IOS\",\r
+
+      //     \"device_id\": \"8564-ahh-sdc4-sddd7-sdbbj\",\r
+
+      //     \"device_ver\": \"IOS 16\",\r
+
+      //     \"os_ver\": \"os 2.1.0\",\r
+
+      //     \"app_ver\": \"v1.1.0\",\r
+
+      //     \"ip\": \"192.249.255.255\",\r
+
+      //     \"country\": \"India\"\r
+
+      // }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

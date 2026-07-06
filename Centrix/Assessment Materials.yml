@@ -1,0 +1,29 @@
+info:
+  name: Assessment Materials
+  type: http
+  seq: 37
+
+http:
+  method: POST
+  url: http://centrix.local/api/course-assessment-material
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: NaAg5zJaBAoKOi02vKRmwdG7twVGX_Sl3O16IdD2yVY
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"AJovr6KQ51RcZ3oUpeoXIJYYRnAmh41SKpqQGJ6MBrOE46q7qmEIsNEk1h2qAgFXUc7e+pHcoxUZIUV4uqonEQ==\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

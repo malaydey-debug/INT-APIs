@@ -1,0 +1,86 @@
+info:
+  name: Advertisement Tracker
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/advertisement/tracker
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: WBlewq1UebIcBUePi72RGHagxPFVd02JSWdL1mLn3P8
+  body:
+    type: json
+    data: "// {\r
+
+      //     \"device_id\": \"8564-ahh-sdc4-sddd7-sdbbj\",\r
+
+      //     \"page\": \"news_details\"\r
+
+      // }\r
+
+      \r
+
+      // {\r
+
+      //     \"data\": \"4xuJzooN9MTyrz9vzIdemFWptb1yWgYjRRTpm5ioR3TFyVJ4LMmnQddXukNIusTxH90F0lh4+orcIyurm6ZD+Clfyto0RgDeZjeCZK9N1o8=\"\r
+
+      // }\r
+
+      \r
+
+      // {\r
+
+      //     \"device_id\": \"8564-ahh-sdc4-sddd7-sdbbj\",\r
+
+      //     \"page\": \"news_details\",\r
+
+      //     \"nid\": 124,\r
+
+      //     \"view_count\": 1,\r
+
+      //     \"click_count\": 1\r
+
+      // }\r
+
+      \r
+
+      // {\r
+
+      //     \"data\": \"4xuJzooN9MTyrz9vzIdemFWptb1yWgYjRRTpm5ioR3TFyVJ4LMmnQddXukNIusTxH90F0lh4+orcIyurm6ZD+LAQWy0VKCJL+OtTvU4DkI3HpblfLZQono1bD8E76gtngjHe1aUwmxWO5g8GWj/gflOUaILIl5H0f/vpYwFDeem+USP9JC5flITeGwumDSGC\"\r
+
+      // }\r
+
+      \r
+
+      // {\r
+
+      //     \"device_id\": \"8564-ahh-sdc4-sddd7-sdbbj\",\r
+
+      //     \"page\": \"news_details\",\r
+
+      //     \"nid\": 56,\r
+
+      //     \"view_count\": 1,\r
+
+      //     \"click_count\": 1\r
+
+      // }\r
+
+      \r
+
+      // {\r
+
+      //     \"data\": \"4xuJzooN9MTyrz9vzIdemFWptb1yWgYjRRTpm5ioR3TFyVJ4LMmnQddXukNIusTxH90F0lh4+orcIyurm6ZD+LAQWy0VKCJL+OtTvU4DkI00kZZprdAXWo2YmI9VOTAYTHnyI7AZxJ1VHoeBAb6vtDd/25NzZWGzkTzTlV1PQuwjSm0W5pdUi9GYPcJNlzHY\"\r
+
+      // }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

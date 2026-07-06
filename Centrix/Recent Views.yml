@@ -1,0 +1,36 @@
+info:
+  name: Recent Views
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/recent-views
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: pOwNo9xTuudXYcuY0yL1hggi98ksrlomJoNUp-D3qVo
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"sKN8RSSmG97fB/kwC/YoqQ==\"\r
+
+      }\r
+
+      \r
+
+      // {\r
+
+      //     \"type\": \"news\"\r
+
+      // }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

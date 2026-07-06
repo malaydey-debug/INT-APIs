@@ -1,0 +1,47 @@
+info:
+  name: User biometric access
+  type: http
+  seq: 35
+
+http:
+  method: POST
+  url: http://localhost:8000/api/user-biometric-access
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: X-CSRF-Token
+      value: NaAg5zJaBAoKOi02vKRmwdG7twVGX_Sl3O16IdD2yVY
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"AKt4mbk+rx3/VwesKNAIUicglXJcbf3KzCZIJJQhOx81VEjMI3CC94/g8b3xGjCnYg35TQOpfAZNS2Gf04JuMw==\"\r
+
+      }\r
+
+      \r
+
+      // {\r
+
+      //     \"device_id\": \"8564-ahh-sdc4-sddd7-sdbb\"\r
+
+      // }\r
+
+      \r
+
+      // {\r
+
+      //     \"device_id\": \"8564-ahh-sdc4-sddd7-sdbbj\",\r
+
+      //     \"biometric_access\": 1\r
+
+      // }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

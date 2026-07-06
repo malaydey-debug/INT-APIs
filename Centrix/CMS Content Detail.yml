@@ -1,0 +1,28 @@
+info:
+  name: CMS Content Detail
+  type: http
+  seq: 23
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/cms-content-detail
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: pOwNo9xTuudXYcuY0yL1hggi98ksrlomJoNUp-D3qVo
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"Jcj9G14pEa81yGEWnQD/QK22gv5U9h0HL+MnKKjCbWg=\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

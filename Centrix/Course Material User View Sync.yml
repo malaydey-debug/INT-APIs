@@ -1,0 +1,44 @@
+info:
+  name: Course Material User View Sync
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/course/material-user-view-sync
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: NaAg5zJaBAoKOi02vKRmwdG7twVGX_Sl3O16IdD2yVY
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"DivS3xYJ4aKYHZ1xY/s5ofvU2cDjHGculZFOfLfDCKXX0pmQ5oIALj6LnKd+PJPJ1UO/+OzudDpl9b/1C3rQswQIYCqvUJqQ3XvsijOdHJbBkUIcHhpqObBWBcQChuBH\"\r
+
+      }\r
+
+      \r
+
+      // {\r
+
+      //     \"course_id\": 14,\r
+
+      //     \"module_id\": 365,\r
+
+      //     \"material_id\": 37,\r
+
+      //     \"type\": \"video\",\r
+
+      //     \"view_time\": \"00:55:12\"\r
+
+      // }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,29 @@
+info:
+  name: User logout
+  type: http
+  seq: 31
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/user-logout
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: X-CSRF-Token
+      value: DFe3h9nLY6d0hUIW4ew5pyyDr2q4IBcwh2LG6OJl9KE
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"33sXlpoZ9QrHa+rRZyDu32lkJ5d2h91kGtTZk6tv3KMtcBJXvpYyK7+GKllQpDZw6EquXsb/AMPZ7uLvumtA8HIPQesI+NRV2Nrmy7t1hRZ5LVWcprULYn+zqyC471c9ARxU60XwNw2ID/0zwtg8Eg==\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

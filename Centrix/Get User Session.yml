@@ -1,0 +1,29 @@
+info:
+  name: Get User Session
+  type: http
+  seq: 30
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/get-user-session
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: X-CSRF-Token
+      value: DFe3h9nLY6d0hUIW4ew5pyyDr2q4IBcwh2LG6OJl9KE
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\": \"33sXlpoZ9QrHa+rRZyDu32lkJ5d2h91kGtTZk6tv3KNrIgcxay3y5jtXi5hWs5Lol4u7K8VfJ8y2K8IYaDZZZg==\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

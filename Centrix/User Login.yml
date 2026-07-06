@@ -1,0 +1,29 @@
+info:
+  name: User Login
+  type: http
+  seq: 28
+
+http:
+  method: POST
+  url: http://localhost:8000/api/user-login
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"+ml2EJXipEvlHfz6cse9D4a4O2fz+EKx1S1xnfO//B1tOzcQBrPu2zcC2IkHKOT6sjkvcQt+2ii8Bcgw0WQT1FNdU9egSsjhCfQrrZFiRgeS4IQzg+XmxFH5ADXfgLRF4y+rbneP65fuwL52LLEyidGxfQjUxFLxmYlftYESGfl1HNbET7exuRc8K22xVG1fX7il6/qZhex6H+BcS6BSxjgWUyHQBdABDlziiSJzb4zcubylktMG2HIjF6kiVU2f\"\r
+
+      \r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: Bookmark
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/bookmark
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: ttbkWlkX_OAdnHtMd_zrg6R_s3AYvPvEONY-FDzqT9s
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"jIRmHg5Q2/i9Kfz/e9Wt0A==\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

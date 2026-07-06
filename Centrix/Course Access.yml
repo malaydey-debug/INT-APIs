@@ -1,0 +1,28 @@
+info:
+  name: Course Access
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/course/access
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: ttbkWlkX_OAdnHtMd_zrg6R_s3AYvPvEONY-FDzqT9s
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"9bN83cEnEnFePFwvGIX88A==\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

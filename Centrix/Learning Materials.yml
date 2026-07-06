@@ -1,0 +1,29 @@
+info:
+  name: Learning Materials
+  type: http
+  seq: 36
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/course-learning-material
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: Gvv7wuQ4Ru1q8WClfQo8ROPQ6pIqu5EtZWRRAOZLscw
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"w5hmi08/XvLZ6QGD3r8RSg2KSn928kra1AW7iZV/ZQNuZesQBsiVwnd1nBK5/gdNnSJbZHhp/vSVhjrmkLWFK+hITDOoxbrDmdpRBhzzb4Q=\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

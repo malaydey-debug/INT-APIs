@@ -1,0 +1,29 @@
+info:
+  name: Razorpay verify-payment
+  type: http
+  seq: 38
+
+http:
+  method: POST
+  url: http://localhost:8000/api/razorpay/verify-payment
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: KQpY7-O0QDo_LiqVlsA5xxg881WTcRQeu3bGIGs_XGw
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\": \"wSlhNtM8leZcS+GWIIr0F5rSSMa9zSeCIXtzx7edWnTZGQZAmFm+zYEP2pAfiaR+ETfMny7iwSPh1a1H81YXyDArB5akt5rb5l7KXIdEr3aqpAR8ISyIFFFBGuVUN1IyVxSTmWW7zCNPMLt9A9u7ZSHhs6+7Ra3TMVxs6Y/pFWh/l1sWem2BeiSBnjG6pdTwQL1pWflhxxDJHv9YcSCNk506DAXpDGuSLPc0gHMZlNo=\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

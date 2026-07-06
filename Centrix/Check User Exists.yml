@@ -1,0 +1,29 @@
+info:
+  name: Check User Exists
+  type: http
+  seq: 25
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/check-user-exists
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+    - name: X-CSRF-Token
+      value: b_DRh4wHo6dv1mprVyY8BT1W-5jy5qY35h1yxXb_TdU
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"Jn2idr4QphzxHMtWx6yMlF+NuA3Nk+f6NWNfUBcKOfH0M6x1+xcslf+RWuRcViA7\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

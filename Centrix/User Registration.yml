@@ -1,0 +1,27 @@
+info:
+  name: User Registration
+  type: http
+  seq: 32
+
+http:
+  method: POST
+  url: http://localhost/centrix_drupal/web/api/user-registration
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: authToken
+      value: wRJSMeKKF2QT4fwpMeJf36P0k6yJV1J9
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\" : \"8hWSG2ZL63+H0dbdIDGEZCIDrFnquedtcx8X0lpA7Pqh3gchMsKNW/jKU8PghMFSPvOCjhcrDo9BroeNSa1JH37S4uXZKV7a4VHgnCP6alngePA01L0d5ARfILWVoZOfGxkFSjxbNs5e2/BcRMgS6ehvEXBzVyQvx1/a2dLibDu0/m0Zwneajk09VN12f0Gna1Ll0gSrD0nIBvkbdMSC/3mW03udXmfvh+K9LqYfbXNeJQlRkXLvzc/3B9Oi/Ds522/OjFEoSFjS4AInML6zdtSEoSw/mvoccvX3Ak8toq3KozMUyPyiuuUH1COcQgXyitKCb4EGNV+YAt+SrZQWR6EReK0dX/93JyJzYGvNIAd67B1IFgx+8xNhW9bQI/cb\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

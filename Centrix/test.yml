@@ -1,0 +1,249 @@
+info:
+  name: /test
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: /test
+  body:
+    type: json
+    data: "{\r
+
+      \    \"col_id\": \"22\",\r
+
+      \    \"login_by\": \"email_id\",\r
+
+      \    \"validate_by\": \"otp\",\r
+
+      \    \"email_id\": \"malay.dey@gmail.com\",\r
+
+      \    \"country_code\": \"\",\r
+
+      \    \"phone_no\": \"\",\r
+
+      \    \"pass\": \"\",\r
+
+      \    \"otp\": 825449\r
+
+      }\r
+
+      {\r
+
+      \    \"email_id\": \"malay.dey@gmail.com\"\r
+
+      }\r
+
+      {\r
+
+      \    \"phone_no\": \"9876543210\"\r
+
+      }\r
+
+      {\r
+
+      \    \"otp\": 581598,\r
+
+      \    \"email_id\": \"malay.dey@gmail.com\",\r
+
+      \    \"type\": \"email_id\",\r
+
+      \    \"otp_for\": \"login\",\r
+
+      \    \"source\": \"login_form\"\r
+
+      }\r
+
+      {\r
+
+      \    \"col_id\": \"23\",\r
+
+      \    \"login_by\": \"email_id\",\r
+
+      \    \"validate_by\": \"otp\",\r
+
+      \    \"email_id\": \"malay.dey@gmail.com\",\r
+
+      \    \"country_code\": \"\",\r
+
+      \    \"phone_no\": \"\",\r
+
+      \    \"pass\": \"\",\r
+
+      \    \"otp\": 581598\r
+
+      }\r
+
+      {\r
+
+      \    \"email_id\": \"\",\r
+
+      \    \"country_code\": \"91\",\r
+
+      \    \"phone_no\": \"9876543210\",\r
+
+      \    \"type\": \"phone_no\",\r
+
+      \    \"otp_for\": \"registration\",\r
+
+      \    \"source\": \"registration_form\"\r
+
+      }\r
+
+      {\r
+
+      \    \"otp\": 219953,\r
+
+      \    \"country_code\": \"91\",\r
+
+      \    \"phone_no\": \"9876543210\",\r
+
+      \    \"type\": \"phone_no\",\r
+
+      \    \"otp_for\": \"registration\",\r
+
+      \    \"source\": \"registration_form\"\r
+
+      }\r
+
+      {\r
+
+      \    \"device_id\": \"8564-ahh-sdc4-sdd\",\r
+
+      \    \"col_id\": 31,\r
+
+      \    \"salutation\": 17,\r
+
+      \    \"register_as\": 27,\r
+
+      \    \"fname\": \"Malay\",\r
+
+      \    \"lname\": \"Dey\",\r
+
+      \    \"email_id\": \"\",\r
+
+      \    \"country\": 36,\r
+
+      \    \"country_code\": 91,\r
+
+      \    \"phone_no\": \"9876543210\",\r
+
+      \    \"otp\": 552945,\r
+
+      \    \"qualification\": 12,\r
+
+      \    \"speciality\": 33,\r
+
+      \    \"i_agreed\": \"agree\"\r
+
+      }\r
+
+      {\r
+
+      \    \"otp\": 552945,\r
+
+      \    \"country_code\": \"91\",\r
+
+      \    \"phone_no\": \"9876543210\",\r
+
+      \    \"type\": \"phone_no\",\r
+
+      \    \"otp_for\": \"registration\",\r
+
+      \    \"source\": \"registration_form\"\r
+
+      }\r
+
+      {\r
+
+      \    \"id\": \"fbeb5ad5-4b52-42d9-8391-151f5df0c9a8\",\r
+
+      \    \"login_log_id\": \"11\"\r
+
+      }\r
+
+      {\r
+
+      \    \"email_id\": \"\",\r
+
+      \    \"country_code\": \"91\",\r
+
+      \    \"phone_no\": \"9876543210\",\r
+
+      \    \"type\": \"phone_no\",\r
+
+      \    \"otp_for\": \"login\",\r
+
+      \    \"source\": \"login_form\"\r
+
+      }\r
+
+      {\r
+
+      \    \"otp\": 163021,\r
+
+      \    \"country_code\": \"91\",\r
+
+      \    \"phone_no\": \"9876543210\",\r
+
+      \    \"type\": \"phone_no\",\r
+
+      \    \"otp_for\": \"login\",\r
+
+      \    \"source\": \"login_form\"\r
+
+      }\r
+
+      {\r
+
+      \    \"col_id\": \"32\",\r
+
+      \    \"login_by\": \"phone_no\",\r
+
+      \    \"validate_by\": \"otp\",\r
+
+      \    \"country_code\": \"91\",\r
+
+      \    \"phone_no\": \"9876543210\",\r
+
+      \    \"otp\": 163021,\r
+
+      \    \"device_id\": \"8564-ahh-sdc4-sdd\"\r
+
+      }\r
+
+      {\r
+
+      \    \"login_by\": \"phone_no\",\r
+
+      \    \"validate_by\": \"biometric\",\r
+
+      \    \"country_code\": \"91\",\r
+
+      \    \"phone_no\": \"9876543210\",\r
+
+      \    \"device_id\": \"8564-ahh-sdc4-sdd\"\r
+
+      }\r
+
+      {\r
+
+      \    \"id\": \"89ab74f3-fdd2-443a-93ad-7686ca95d47d\",\r
+
+      \    \"login_log_id\": \"23\"\r
+
+      }\r
+
+      {\r
+
+      \    \"id\": \"89ab74f3-fdd2-443a-93ad-7686ca95d47d\",\r
+
+      \    \"sid\": \"_ghKYoD9XZDjewBXm2JrdNPxY4h_5jiv33Wbgc674k4\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
