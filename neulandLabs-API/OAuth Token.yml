@@ -21,9 +21,6 @@ http:
         value: 6vTUO0-2q4drd9zX7xPVMWqzhRem36rVGGVVmPE-dYc
       - name: client_secret
         value: 2Fje6J43Iqvk6fmL5R38bH
-      - name: ""
-        value: ""
-        disabled: true
 
 settings:
   encodeUrl: true

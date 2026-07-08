@@ -1,11 +1,11 @@
 info:
-  name: Basic Page Details
+  name: CDMO Page Details
   type: http
-  seq: 5
+  seq: 8
 
 http:
   method: POST
-  url: "{{backend_url}}/api/en/basic-page-details"
+  url: "{{backend_url}}/api/en/cdmo-page-details"
   headers:
     - name: Content-Type
       value: application/json
