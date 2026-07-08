@@ -18,9 +18,9 @@ http:
       - name: grant_type
         value: client_credentials
       - name: client_id
-        value: 6vTUO0-2q4drd9zX7xPVMWqzhRem36rVGGVVmPE-dYc
+        value: "{{client_id}}"
       - name: client_secret
-        value: 2Fje6J43Iqvk6fmL5R38bH
+        value: "{{client_secret}}"
 
 settings:
   encodeUrl: true
